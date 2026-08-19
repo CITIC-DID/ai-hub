@@ -29,18 +29,24 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: 安装 Playwright 浏览器
+      - name: 4.1 安装 Playwright 系统依赖
+        env:
+          DEBIAN_FRONTEND: noninteractive
         run: |
-          playwright install chromium --with-deps
+          sudo -E npx playwright install-deps chromium
 
-      - name: 4. 执行爬虫脚本
+      - name: 4.2 安装 Playwright 浏览器二进制文件
+        run: |
+          npx playwright install chromium
+
+      - name: 5. 执行爬虫脚本
         env:
             DEEK_SEEK_API_KEY: ${{ secrets.DEEK_SEEK_API_KEY }}
         run: |
           # python scripts/fetch_and_process.py
           python scripts/process_no_ai.py
 
-      - name: 5. 提交并推送更新后的 data.json
+      - name: 6. 提交并推送更新后的 data.json
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
