@@ -29,6 +29,10 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      - name: 安装 Playwright 浏览器
+        run: |
+          playwright install chromium --with-deps
+
       - name: 4. 执行爬虫脚本
         run: |
           python scripts/fetch_and_process.py
