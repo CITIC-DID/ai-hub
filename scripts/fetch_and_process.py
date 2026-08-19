@@ -13,7 +13,7 @@ from deep_translator import GoogleTranslator
 from playwright.sync_api import sync_playwright
 
 # ==================== 配置区 ====================
-DEEPSEEK_API_KEY = os.getenv("DEEK_SEEK_API_KEY")
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "sk-074b2023166045b4b945a7a142f8c922")
 
 # RSS 订阅源配置列表
 RSS_SOURCES = [
@@ -23,14 +23,28 @@ RSS_SOURCES = [
         "region": "北美洲"
     },
     {
-        "source_name": "MIT Tech Review AI",
-        "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+        "source_name": "Google DeepMind",
+        "url": "https://deepmind.google/blog/rss.xml",
         "region": "全球"
     },
+
+    # --- AI 平台聚合商与 API 网关基础设施 ---
     {
-        "source_name": "GitHub Trending AI",
-        "url": "https://rsshub.app/github/trending/daily/python", # 示例 RSSHub 源
+        "source_name": "OpenRouter (API聚合商)",
+        "url": "https://openrouter.ai/feed.xml",
         "region": "全球"
+    },
+
+    # --- 国内高质量专业媒体 ---
+    {
+        "source_name": "量子位",
+        "url": "https://www.qbitai.com/feed",
+        "region": "国内"
+    },
+    {
+        "source_name": "机器之心",
+        "url": "https://www.jiqizhixin.com/rss",
+        "region": "国内"
     }
 ]
 
