@@ -34,6 +34,8 @@ jobs:
           playwright install chromium --with-deps
 
       - name: 4. 执行爬虫脚本
+        env:
+            DEEK_SEEK_API_KEY: ${{ secrets.DEEK_SEEK_API_KEY }}
         run: |
           python scripts/fetch_and_process.py
 
