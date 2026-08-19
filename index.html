@@ -206,7 +206,7 @@
         <div class="stat-label">深度对标聚合厂商</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">12 款</div>
+        <div class="stat-number">多 款</div>
         <div class="stat-label">主流基座大模型对比</div>
       </div>
     </div>
@@ -348,6 +348,8 @@
               <tbody id="model-leaderboard-body"></tbody>
             </table>
           </div>
+
+          <div class="pagination-bar" id="model-leaderboard-pagination"></div>
         </div>
       </div>
 
@@ -379,6 +381,8 @@
             <tbody id="model-pricing-body"></tbody>
           </table>
         </div>
+
+        <div class="pagination-bar" id="model-pricing-pagination"></div>
       </div>
     </section>
 
@@ -441,10 +445,15 @@
       { rank: 1, name: "GPT-4o (2024-08-06)", vendor: "OpenAI", category: "FLAGSHIP", elo: 1286, codeScore: "85.2%", context: "128K Tokens", inputPrice: "$2.50", outputPrice: "$10.00", cacheDiscount: "50% 折扣 ($1.25)", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "Fine-tuning / PTU / 零数据留存" },
       { rank: 2, name: "Claude 3.5 Sonnet", vendor: "Anthropic", category: "FLAGSHIP", elo: 1282, codeScore: "92.0%", context: "200K Tokens", inputPrice: "$3.00", outputPrice: "$15.00", cacheDiscount: "90% 折扣 ($0.30)", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "Prompt Caching / AWS Bedrock 集成" },
       { rank: 3, name: "DeepSeek-V3 / R1", vendor: "DeepSeek", category: "OPEN", elo: 1278, codeScore: "89.1%", context: "64K ~ 128K", inputPrice: "$0.14", outputPrice: "$0.28", cacheDiscount: "50% 折扣 ($0.07)", licenseType: "MIT / 开源可商用", isOpen: true, enterpriseFeatures: "权重开源 / 支持完全私有部署" },
-      { rank: 4, name: "Gemini 1.5 Pro", vendor: "Google", category: "FLAGSHIP", elo: 1260, codeScore: "84.1%", context: "2,000K (2M)", inputPrice: "$3.50", outputPrice: "$10.50", cacheDiscount: "75% 折扣 ($0.875)", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "超长上下文 / Vertex AI 企业合规" },
-      { rank: 5, name: "Qwen2.5-72B-Instruct", vendor: "阿里云 (Alibaba)", category: "OPEN", elo: 1252, codeScore: "86.5%", context: "128K Tokens", inputPrice: "$0.40", outputPrice: "$1.20", cacheDiscount: "无 / 统一对折特惠", licenseType: "Qwen License / 允许商用", isOpen: true, enterpriseFeatures: "模型蒸馏 / 百炼云托管&私有化" },
-      { rank: 6, name: "Llama 3.3 70B Instruct", vendor: "Meta", category: "OPEN", elo: 1240, codeScore: "81.0%", context: "128K Tokens", inputPrice: "$0.30", outputPrice: "$0.60", cacheDiscount: "N/A (依赖第三方平台)", licenseType: "Llama 3 Community", isOpen: true, enterpriseFeatures: "生态完善 / 极为丰富微调工具链" },
-      { rank: 7, name: "GPT-4o-mini", vendor: "OpenAI", category: "FLAGSHIP", elo: 1215, codeScore: "77.2%", context: "128K Tokens", inputPrice: "$0.15", outputPrice: "$0.60", cacheDiscount: "50% 折扣 ($0.075)", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "超高吞吐率 / 经济型逻辑处理" }
+      { rank: 4, name: "Gemini 1.5 Pro", vendor: "Google", category: "FLAGSHIP", elo: 1260, codeScore: "84.1%", context: "2,000K (2M)", inputPrice: "$1.25", outputPrice: "$5.00", cacheDiscount: "75% 折扣 ($0.875)", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "超长上下文 / Vertex AI 企业合规" },
+      { rank: 5, name: "Qwen 2.5 72B", vendor: "阿里云 (Alibaba)", category: "OPEN", elo: 1255, codeScore: "86.5%", context: "128K Tokens", inputPrice: "$0.35", outputPrice: "$1.05", cacheDiscount: "无 / 统一对折特惠", licenseType: "Qwen License / 允许商用", isOpen: true, enterpriseFeatures: "模型蒸馏 / 百炼云托管&私有化" },
+      { rank: 6, name: "Llama 3.3 70B", vendor: "Meta", category: "OPEN", elo: 1248, codeScore: "81.0%", context: "128K Tokens", inputPrice: "$0.40", outputPrice: "$0.80", cacheDiscount: "N/A (依赖第三方平台)", licenseType: "Llama 3 Community", isOpen: true, enterpriseFeatures: "生态完善 / 极为丰富微调工具链" },
+      { rank: 7, name: "Mistral Large 2", vendor: "Mistral AI", category: "OPEN", elo: 1245, codeScore: "82.4%", context: "128K Tokens", inputPrice: "$2.00", outputPrice: "$6.00", cacheDiscount: "N/A", licenseType: "MNLP License", isOpen: true, enterpriseFeatures: "多语言能力突出 / 支持私有化" },
+      { rank: 8, name: "GLM-4-Plus", vendor: "智谱 AI", category: "FLAGSHIP", elo: 1240, codeScore: "79.8%", context: "128K Tokens", inputPrice: "$0.70", outputPrice: "$2.10", cacheDiscount: "特定套餐优惠", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "全栈国产化适配 / 企业级 Agent" },
+      { rank: 9, name: "Kimi (Moonshot)", vendor: "月之暗面", category: "FLAGSHIP", elo: 1238, codeScore: "78.5%", context: "200K Tokens", inputPrice: "$1.00", outputPrice: "$3.00", cacheDiscount: "长文本缓存优惠", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "无损超长上下文 / 高效检索" },
+      { rank: 10, name: "豆包 Doubao-Pro", vendor: "字节跳动", category: "FLAGSHIP", elo: 1235, codeScore: "76.2%", context: "128K Tokens", inputPrice: "$0.11", outputPrice: "$0.22", cacheDiscount: "极低成本预留并发", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "火山引擎 Ark 托管 / 极致性价比" },
+      { rank: 11, name: "Yi-Large", vendor: "零一万物", category: "FLAGSHIP", elo: 1230, codeScore: "77.0%", context: "32K Tokens", inputPrice: "$0.80", outputPrice: "$2.40", cacheDiscount: "阶梯折扣", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "深度思考能力 / 企业定制服务" },
+      { rank: 12, name: "腾讯混元 Pro", vendor: "腾讯", category: "FLAGSHIP", elo: 1228, codeScore: "75.8%", context: "256K Tokens", inputPrice: "$0.50", outputPrice: "$1.50", cacheDiscount: "腾讯云资源包特惠", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "微信生态打通 / 腾讯云架构支持" }
     ];
 
     // 主题切换控制
@@ -715,42 +724,112 @@
       radarChartInstance.setOption(option);
     }
 
+    let modelLeaderboardPage = 1;
+    let modelPricingPage = 1;
+    const modelItemsPerPage = 6
+
     // 6. 渲染 Module 3: 大模型智能排行榜 & 价格矩阵
     function renderModelBenchmark(typeFilter = 'ALL') {
-      const filtered = typeFilter === 'ALL'
-        ? modelBenchmarkData
-        : modelBenchmarkData.filter(m => m.category === typeFilter);
+  // --- 1. 渲染智能排行榜 ---
+  const leaderboardBody = document.getElementById('model-leaderboard-body');
+  const lbTotalPages = Math.ceil(modelBenchmarkData.length / modelItemsPerPage);
+  if (modelLeaderboardPage > lbTotalPages) modelLeaderboardPage = lbTotalPages;
+  if (modelLeaderboardPage < 1) modelLeaderboardPage = 1;
 
-      const leaderboardBody = document.getElementById('model-leaderboard-body');
-      leaderboardBody.innerHTML = modelBenchmarkData.map(m => `
-        <tr>
-          <td style="font-weight:bold; color:var(--accent-purple);">#${m.rank}</td>
-          <td style="font-weight:600; color:var(--text-main);">${m.name}</td>
-          <td style="color:var(--text-muted);">${m.vendor}</td>
-          <td style="color:var(--accent-green); font-weight:bold;">${m.elo}</td>
-          <td style="color:var(--accent-blue); font-weight:600;">${m.codeScore}</td>
-          <td>${m.isOpen ? '<span class="tag-open">开源可商用</span>' : '<span class="tag-closed">闭源 API</span>'}</td>
-        </tr>
-      `).join('');
+  const lbStart = (modelLeaderboardPage - 1) * modelItemsPerPage;
+  const lbPaginated = modelBenchmarkData.slice(lbStart, lbStart + modelItemsPerPage);
 
-      const pricingBody = document.getElementById('model-pricing-body');
-      pricingBody.innerHTML = filtered.map(m => `
-        <tr>
-          <td style="font-weight:600; color:var(--text-main);">${m.name}</td>
-          <td style="color:var(--text-muted);">${m.vendor}</td>
-          <td><span style="background:var(--input-bg); border:1px solid var(--border-color); padding:2px 8px; border-radius:4px; font-size:0.8rem; color:var(--text-main);">${m.context}</span></td>
-          <td style="color:var(--accent-green); font-weight:600;">${m.inputPrice}</td>
-          <td style="color:var(--accent-yellow); font-weight:600;">${m.outputPrice}</td>
-          <td style="color:var(--text-muted); font-size:0.8rem;">${m.cacheDiscount}</td>
-          <td>${m.isOpen ? `<span class="tag-open">${m.licenseType}</span>` : `<span class="tag-closed">${m.licenseType}</span>`}</td>
-          <td style="color:var(--text-muted); font-size:0.8rem;">${m.enterpriseFeatures}</td>
-        </tr>
-      `).join('');
+  leaderboardBody.innerHTML = lbPaginated.map(m => `
+    <tr>
+      <td style="font-weight:bold; color:var(--accent-purple);">#${m.rank}</td>
+      <td style="font-weight:600; color:var(--text-main);">${m.name}</td>
+      <td style="color:var(--text-muted);">${m.vendor}</td>
+      <td style="color:var(--accent-green); font-weight:bold;">${m.elo}</td>
+      <td style="color:var(--accent-blue); font-weight:600;">${m.codeScore}</td>
+      <td>${m.isOpen ? '<span class="tag-open">开源可商用</span>' : '<span class="tag-closed">闭源 API</span>'}</td>
+    </tr>
+  `).join('');
+
+  renderModelPagination('model-leaderboard-pagination', lbTotalPages, modelLeaderboardPage, 'changeModelLeaderboardPage');
+
+  // --- 2. 渲染对标矩阵 ---
+  const filtered = typeFilter === 'ALL'
+    ? modelBenchmarkData
+    : modelBenchmarkData.filter(m => m.category === typeFilter);
+
+  const pricingBody = document.getElementById('model-pricing-body');
+  const prTotalPages = Math.ceil(filtered.length / modelItemsPerPage);
+  if (modelPricingPage > prTotalPages) modelPricingPage = prTotalPages;
+  if (modelPricingPage < 1) modelPricingPage = 1;
+
+  const prStart = (modelPricingPage - 1) * modelItemsPerPage;
+  const prPaginated = filtered.slice(prStart, prStart + modelItemsPerPage);
+
+  pricingBody.innerHTML = prPaginated.map(m => `
+    <tr>
+      <td style="font-weight:600; color:var(--text-main);">${m.name}</td>
+      <td style="color:var(--text-muted);">${m.vendor}</td>
+      <td><span style="background:var(--input-bg); border:1px solid var(--border-color); padding:2px 8px; border-radius:4px; font-size:0.8rem; color:var(--text-main);">${m.context}</span></td>
+      <td style="color:var(--accent-green); font-weight:600;">${m.inputPrice}</td>
+      <td style="color:var(--accent-yellow); font-weight:600;">${m.outputPrice}</td>
+      <td style="color:var(--text-muted); font-size:0.8rem;">${m.cacheDiscount}</td>
+      <td>${m.isOpen ? `<span class="tag-open">${m.licenseType}</span>` : `<span class="tag-closed">${m.licenseType}</span>`}</td>
+      <td style="color:var(--text-muted); font-size:0.8rem;">${m.enterpriseFeatures}</td>
+    </tr>
+  `).join('');
+
+  renderModelPagination('model-pricing-pagination', prTotalPages, modelPricingPage, 'changeModelPricingPage');
+}
+
+    // 通用 Module 3 分页条渲染器
+    function renderModelPagination(containerId, totalPages, currentPage, callbackName) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      if (totalPages <= 1) {
+        container.innerHTML = '';
+        return;
+      }
+
+      let html = `<button class="filter-btn" ${currentPage === 1 ? 'disabled style="opacity:0.4; cursor:not-allowed;"' : ''} onclick="${callbackName}(${currentPage - 1})">上一页</button>`;
+      for (let i = 1; i <= totalPages; i++) {
+        html += `<button class="filter-btn ${i === currentPage ? 'active' : ''}" onclick="${callbackName}(${i})">${i}</button>`;
+      }
+      html += `<button class="filter-btn" ${currentPage === totalPages ? 'disabled style="opacity:0.4; cursor:not-allowed;"' : ''} onclick="${callbackName}(${currentPage + 1})">下一页</button>`;
+
+      container.innerHTML = html;
     }
 
+    // 页码切换事件响应
+    function changeModelLeaderboardPage(page) {
+      modelLeaderboardPage = page;
+      const activeType = document.querySelector('#model-type-filters .filter-btn.active')?.dataset.type || 'ALL';
+      renderModelBenchmark(activeType);
+    }
+
+    function changeModelPricingPage(page) {
+      modelPricingPage = page;
+      const activeType = document.querySelector('#model-type-filters .filter-btn.active')?.dataset.type || 'ALL';
+      renderModelBenchmark(activeType);
+    }
+
+    const modelScatterData = [
+      { name: "GPT-4o", vendor: "OpenAI (闭源)", value: [2.50, 1286] },
+      { name: "Claude 3.5 Sonnet", vendor: "Anthropic (闭源)", value: [3.00, 1282] },
+      { name: "DeepSeek-V3", vendor: "DeepSeek (开源)", value: [0.27, 1278] },
+      { name: "Gemini 1.5 Pro", vendor: "Google (闭源)", value: [1.25, 1260] },
+      { name: "Qwen 2.5 72B", vendor: "通义千问 (开源)", value: [0.35, 1255] },
+      { name: "Llama 3.3 70B", vendor: "Meta (开源)", value: [0.40, 1248] },
+      { name: "Mistral Large 2", vendor: "Mistral (开源)", value: [2.00, 1245] },
+      { name: "GLM-4-Plus", vendor: "智谱 AI (闭源)", value: [0.70, 1240] },
+      { name: "Kimi (Moonshot)", vendor: "月之暗面 (闭源)", value: [1.00, 1238] },
+      { name: "豆包 Doubao-Pro", vendor: "字节跳动 (闭源)", value: [0.11, 1235] },
+      { name: "Yi-Large", vendor: "零一万物 (闭源)", value: [0.80, 1230] },
+      { name: "腾讯混元 Pro", vendor: "腾讯 (闭源)", value: [0.50, 1228] }
+    ];
     // 7. 初始化 Module 3 散点图
     function initModelScatterChart() {
       const chartDom = document.getElementById('model-scatter-chart');
+      if (!chartDom) return;
       if (scatterChartInstance) scatterChartInstance.dispose();
 
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
@@ -759,19 +838,9 @@
 
       scatterChartInstance = echarts.init(chartDom);
 
-      const seriesData = [
-        { name: 'DeepSeek-V3', value: [0.14, 1278], vendor: 'DeepSeek (开源)' },
-        { name: 'GPT-4o-mini', value: [0.15, 1215], vendor: 'OpenAI' },
-        { name: 'Llama-3.3-70B', value: [0.30, 1240], vendor: 'Meta (开源)' },
-        { name: 'Qwen2.5-72B', value: [0.40, 1252], vendor: 'Alibaba (开源)' },
-        { name: 'GPT-4o', value: [2.50, 1286], vendor: 'OpenAI' },
-        { name: 'Claude 3.5 Sonnet', value: [3.00, 1282], vendor: 'Anthropic' },
-        { name: 'Gemini 1.5 Pro', value: [3.50, 1260], vendor: 'Google' }
-      ];
-
       const option = {
         backgroundColor: 'transparent',
-        grid: { top: 30, right: 40, bottom: 65, left: 60 },
+        grid: { top: 30, right: 50, bottom: 65, left: 60 },
         tooltip: {
           formatter: function (params) {
             return `<b>${params.data.name}</b> (${params.data.vendor})<br/>
@@ -780,17 +849,20 @@
           }
         },
         xAxis: {
-          name: '每1M Token输入成本($)',
+          name: '每 1M Token 输入成本 ($)',
           nameLocation: 'middle',
           nameGap: 35,
+          nameTextStyle: { color: textColor, fontSize: 12, fontWeight: '500' },
           type: 'value',
-          axisLabel: { color: textColor },
+          min: 0,
+          max: 3.5,
+          axisLabel: { color: textColor, formatter: '${value}' },
           splitLine: { lineStyle: { color: splitLineColor } }
         },
         yAxis: {
           name: 'LMSYS Arena ELO',
           type: 'value',
-          min: 1200,
+          min: 1210,
           max: 1300,
           axisLabel: { color: textColor },
           splitLine: { lineStyle: { color: splitLineColor } }
@@ -798,9 +870,10 @@
         series: [{
           type: 'scatter',
           symbolSize: 18,
-          data: seriesData,
+          data: modelScatterData,
           itemStyle: {
             color: function(params) {
+              // 开源模型用蓝色，闭源模型用紫色
               return params.data.vendor.includes('开源') ? '#2563eb' : '#7c3aed';
             }
           },
@@ -809,7 +882,8 @@
             formatter: '{b}',
             position: 'top',
             color: isDark ? '#f3f4f6' : '#0f172a',
-            fontSize: 10
+            fontSize: 10,
+            distance: 6
           }
         }]
       };
@@ -844,6 +918,17 @@
       document.querySelectorAll('#model-type-filters .filter-btn').forEach(b => b.classList.remove('active'));
       e.target.classList.add('active');
 
+      const type = e.target.dataset.type;
+      renderModelBenchmark(type);
+    });
+
+    // Module 3 按钮筛选响应，重置至第一页
+    document.getElementById('model-type-filters').addEventListener('click', (e) => {
+      if (!e.target.classList.contains('filter-btn')) return;
+      document.querySelectorAll('#model-type-filters .filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+
+      modelPricingPage = 1; // 切换分类时重置页码
       const type = e.target.dataset.type;
       renderModelBenchmark(type);
     });
