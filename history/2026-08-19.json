@@ -1,7 +1,439 @@
 {
-  "last_updated": "2026-08-19 04:11:56",
-  "total_count": 78,
+  "last_updated": "2026-08-19 08:24:49",
+  "total_count": 102,
   "news": [
+    {
+      "title_zh": "ChatGPT 广告扩展到整个欧洲",
+      "summary_zh": "ChatGPT 广告扩展到整个欧洲；ChatGPT 广告正在扩展到 31 个欧洲市场",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "欧洲",
+        "广告商",
+        "选项"
+      ],
+      "importance_score": 7.5,
+      "source": "OpenAI Blog",
+      "region": "北美洲",
+      "url": "https://openai.com/index/chatgpt-ads-expands-across-europe",
+      "created_at": "2026-08-19 08:24:45"
+    },
+    {
+      "title_zh": "GPT-5.6 构建者指南",
+      "summary_zh": "GPT-5.6 构建者指南；了解初创公司如何使用 GPT-5.6 通过更智能的模型选择和新的 Responses API 功能来构建更快、更具成本效益的 AI 代理",
+      "category": {
+        "l1": "政策",
+        "l2": "聚合"
+      },
+      "tags": [
+        "了解",
+        "构建",
+        "指南"
+      ],
+      "importance_score": 7.5,
+      "source": "OpenAI Blog",
+      "region": "北美洲",
+      "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
+      "created_at": "2026-08-19 08:24:45"
+    },
+    {
+      "title_zh": "预览超快模式",
+      "summary_zh": "预览超快模式：GPT-5.6 Sol 速度高达 14 倍；预览 Ultrafast，这是一个新的 OpenAI API 服务层，运行 GPT-5.6 Sol 的速度提高了 14 倍",
+      "category": {
+        "l1": "厂商",
+        "l2": "聚合"
+      },
+      "tags": [
+        "预览",
+        "运行",
+        "速度"
+      ],
+      "importance_score": 7.5,
+      "source": "OpenAI Blog",
+      "region": "北美洲",
+      "url": "https://openai.com/index/previewing-ultrafast",
+      "created_at": "2026-08-19 08:24:45"
+    },
+    {
+      "title_zh": "这些初创公司正在追逐法学硕士的下一个...",
+      "summary_zh": "这些初创公司正在追逐法学硕士的下一个重大目标；早在 2017 年夏天，谷歌的人工智能研究人员就发表了一篇名为“注意力就是你所需要的”的论文，其中他们描述了一种新的“注意力”",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "技术",
+        "行业",
+        "发表"
+      ],
+      "importance_score": 6.0,
+      "source": "MIT Tech Review AI",
+      "region": "全球",
+      "url": "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/",
+      "created_at": "2026-08-19 08:24:46"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase AI 数据中心遭反对潮，硅谷巨头砸钱\"灭火\" 美科技公司为推进数据中心建设，正以开放日、就业承诺和资金争取公众支持；佐治亚州约千名居民举“我没投票给AI”“数据不能当水喝...",
+      "category": {
+        "l1": "厂商",
+        "l2": "开源"
+      },
+      "tags": [
+        "承诺",
+        "推进",
+        "现场"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30474",
+      "created_at": "2026-08-19 08:24:46"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase \"神奇小子\"公司推 chestnut eGPU：车载 AI 算力飙百倍 comma.ai 8月12日推出 chestnut 外置 eGPU 扩展坞，单机249美元，含 A...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "算力",
+        "创始人",
+        "扩展"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30473",
+      "created_at": "2026-08-19 08:24:46"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase 程序员福利再加码；Anthropic官方宣布Claude Code每周50%额度加成延长至8月31日 Anthropic宣布将AI编程助手Claude Code每周使用额...",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "额度",
+        "方案",
+        "提升"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30472",
+      "created_at": "2026-08-19 08:24:46"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase Mozilla升级Firefox智能窗口，新增AI标签管理与网页检索 8月19日，Mozilla为Firefox测试版AI“智能窗口”推出新功能：可依据相关性自动推荐标签...",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "标签",
+        "管理",
+        "浏览"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30471",
+      "created_at": "2026-08-19 08:24:46"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase 腾讯大模型迎来人事大地震：姚顺雨掌舵基础模型 腾讯混元多模态团队近期深度调整：原xAI多模态理解负责人蔺旭东加盟，任多模态内容生成算法负责人；原负责人胡瀚离职创业，前Op...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "负责人",
+        "模态",
+        "模型"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30470",
+      "created_at": "2026-08-19 08:24:47"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase Claude Code额度加成延期，Anthropic或将50%提升变成长期方案 Anthropic宣布将Claude Code每周使用额度50%的临时加成从8月19日延...",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "额度",
+        "提升",
+        "方案"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30469",
+      "created_at": "2026-08-19 08:24:47"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase 腾讯\"吐司\"推一键上架：AI 生成应用直登应用宝 腾讯“吐司”平台推出“一站式上架App”付费功能：用户用自然语言生成安卓应用后，可在平台内完成软着申请、备案、合规文件生...",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "生成",
+        "应用",
+        "上架"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30468",
+      "created_at": "2026-08-19 08:24:47"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "草案无法律约束力，但敦促开发者保持透明，公开数据采集方式，避免使用盗版网站，并鼓励披露训练集中是否含漫画、音乐等内容",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "训练",
+        "数据",
+        "披露"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30467",
+      "created_at": "2026-08-19 08:24:47"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase 千问APP上线七夕AI送花助手 还能测情侣默契度 8月29日七夕，千问APP联合淘宝闪购推出“送花助手Skill”和“七夕好物推荐测试”，依托大模型覆盖节日送礼全场景；用...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "推荐",
+        "闪购",
+        "助手"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30466",
+      "created_at": "2026-08-19 08:24:47"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "AI算力爆发推动全球数据中心扩张，却因电价上涨、水资源消耗和环境污染引发公众强烈抵制；OpenAI、Meta、微软等科技巨头面临公关与政治危机，被迫放弃以往保密和政治运作模式，转而投入资金、承诺...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "数据中心",
+        "消耗",
+        "社区"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30465",
+      "created_at": "2026-08-19 08:24:47"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase PICO Space Pro头显定档9月2日发布，双芯架构与4000 PPI微型OLED强势来袭 PICO-XR官宣新品PICO Space Pro将于9月2日14:30...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "设计",
+        "发布",
+        "标杆"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30464",
+      "created_at": "2026-08-19 08:24:47"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase Modular 官宣 Mojo 语言正式全面开源，拥抱 Apache 2.0 许可协议 Modular团队宣布开源新一代通用编程语言Mojo及其编译器、工具链，采用含LL...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "编译器",
+        "编程语言",
+        "开源"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30463",
+      "created_at": "2026-08-19 08:24:48"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase 敲代码前先画UI原型；Anthropic官宣Claude Code即将大招整合/design命令 Anthropic产品设计师Nate Parrott于8月18日预告，C...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "设计",
+        "命令",
+        "效率"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30462",
+      "created_at": "2026-08-19 08:24:48"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase 蚂蚁阿福发布医生端服务战略全景:从基层到三甲，做好医生的AI好帮手 8月19日中国医师节，蚂蚁阿福公布医生端服务战略：为村医到名医、基层到三甲定制AI助手，覆盖诊疗、患者...",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "医生",
+        "基层",
+        "服务"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30461",
+      "created_at": "2026-08-19 08:24:48"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "Copilot本支持URL接收指令，可总结收件箱、起草邮件，该漏洞使其沦为数据窃取通道",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "绕过",
+        "窃取",
+        "确认"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30460",
+      "created_at": "2026-08-19 08:24:48"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "摆脱独立显卡束缚，阿里5nm RISC-V芯片成功原生跑通270亿大模型 阿里达摩院旗舰CPU玄铁C950实现里程碑：原生运行通义千问3.8-27B大模型，成为RISC-V架构首次不依赖GPU、...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "原生",
+        "核心",
+        "台积"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30459",
+      "created_at": "2026-08-19 08:24:48"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase 市值直逼马斯克；AI新贵Anthropic剑指2026最大IPO，营收狂飙六倍成最大黑马 人工智能初创公司Anthropic虽未上市，但在预测市场Polymarket上，...",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "升至",
+        "市场",
+        "黑马"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30458",
+      "created_at": "2026-08-19 08:24:48"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase OpenAI 二季度营收 67 亿美元，18% 增速远不及 Anthropic 反超 OpenAI二季度营收67亿美元，环比增18%，但营业亏损率扩大，IPO前盈利更远；...",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "改写",
+        "盈利",
+        "扩大"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30457",
+      "created_at": "2026-08-19 08:24:48"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase Perplexity印度免费订阅实验显效，应用收入较促销期增长60% Perplexity携手印度Airtel向3.6亿用户免费提供一年Pro订阅（原价约200美元）；首...",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "免费",
+        "收入",
+        "订阅"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30456",
+      "created_at": "2026-08-19 08:24:48"
+    },
+    {
+      "title_zh": "刚刚",
+      "summary_zh": "刚刚 . AIbase 腾讯吐司上线App上架能力，打通AI应用开发与分发 腾讯应用宝旗下AI平台“吐司”推出“上架App”能力及开发者权益包；用户用自然语言生成安卓应用后，可一站式完成软着申请...",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "上架",
+        "应用",
+        "能力"
+      ],
+      "importance_score": 6.0,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/30455",
+      "created_at": "2026-08-19 08:24:49"
+    },
     {
       "title_zh": "ChatGPT青少年版发布",
       "summary_zh": "OpenAI推出ChatGPT青少年版，旨在帮助青少年学习、批判性思考并自信使用AI，同时提供更强的内置保护、健康使用功能及家长控制。",
