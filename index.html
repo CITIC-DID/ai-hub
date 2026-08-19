@@ -508,6 +508,28 @@
       currentPage = 1; // 每次筛选重置回第 1 页
       renderNews();
     }
+
+    function calculateTodayCount(newsList, lastUpdated) {
+      // 获取当前本地日期的 YYYY-MM-DD 格式
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      const todayStr = `${year}-${month}-${day}`;
+
+      // 1. 如果新闻数据项包含 pub_date / date / created_at 字段，按条目日期筛选
+      const todayNews = newsList.filter(item => {
+        const itemDate = item.pub_date || item.date || item.created_at;
+        if (itemDate) {
+          return itemDate.includes(todayStr);
+        }
+      // 2. 若单条无日期字段，则对比整个 json 的最后更新时间 last_updated 是否为今天
+      return lastUpdated ? lastUpdated.includes(todayStr) : true;
+      });
+
+      return todayNews.length;
+    }
+
     // 1. 读取本地 data.json
     function loadData() {
       fetch('./data.json')
@@ -517,15 +539,23 @@
         })
         .then(data => {
           rawNews = data.news || [];
-          document.getElementById('stat-news-count').innerText = rawNews.length;
-          document.getElementById('update-status').innerText = `最后更新: ${data.last_updated || '刚刚'}`;
-          applyFilters(); // 使用统一筛选初始化渲染
+          const lastUpdated = data.last_updated || '';
+
+          // 计算并更新今日情报条数
+          const todayCount = calculateTodayCount(rawNews, lastUpdated);
+          document.getElementById('stat-news-count').innerText = `${todayCount} 条`;
+          document.getElementById('update-status').innerText = `最后更新: ${lastUpdated || '刚刚'}`;
+
+          applyFilters();
         })
         .catch(err => {
           console.warn("⚠️ 读取 data.json 失败，改用 Fallback 模拟数据展示:", err);
           rawNews = fallbackData.news;
-          document.getElementById('stat-news-count').innerText = rawNews.length;
-          applyFilters(); // 使用统一筛选初始化渲染
+
+          const todayCount = calculateTodayCount(rawNews, fallbackData.last_updated);
+          document.getElementById('stat-news-count').innerText = `${todayCount} 条`;
+
+          applyFilters();
         });
     }
 
