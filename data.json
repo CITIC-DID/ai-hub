@@ -1,0 +1,448 @@
+{
+  "last_updated": "2026-08-18 07:36:01",
+  "total_count": 26,
+  "news": [
+    {
+      "title_zh": "AI重塑网络安全攻防格局",
+      "summary_zh": "AI正同时改变攻击者和防御者的网络安全格局。OpenAI分享了其强化防御的措施，并为安全团队提供了应对建议。",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "AI安全",
+        "网络安全",
+        "OpenAI"
+      ],
+      "importance_score": 8.5,
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/index/the-defenders-window",
+      "created_at": "2026-08-18 07:35:05"
+    },
+    {
+      "title_zh": "OpenAI加入PORTS-Pike项目",
+      "summary_zh": "OpenAI宣布加入俄亥俄州南部的PORTS-Pike项目，扩大社区投资，支持数千个就业岗位。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "OpenAI",
+        "社区投资",
+        "就业"
+      ],
+      "importance_score": 7.0,
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/index/openai-joins-ports-pike-project",
+      "created_at": "2026-08-18 07:35:07"
+    },
+    {
+      "title_zh": "OpenAI资助14个AI政策研究项目",
+      "summary_zh": "OpenAI资助14个独立项目，探索新AI政策理念，以扩大经济机会并增强智能时代的社会韧性。",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "OpenAI",
+        "AI政策",
+        "经济机会"
+      ],
+      "importance_score": 8.0,
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age",
+      "created_at": "2026-08-18 07:35:09"
+    },
+    {
+      "title_zh": "Flock支持者忽视的隐私风险",
+      "summary_zh": "美国警用科技公司Flock宣布平台更新，旨在防止滥用其12万自动车牌识别网络，但批评者认为这些措施不足以保护隐私，支持者忽视了潜在风险。",
+      "category": {
+        "l1": "行业",
+        "l2": "厂商"
+      },
+      "tags": [
+        "Flock",
+        "车牌识别",
+        "隐私"
+      ],
+      "importance_score": 7.5,
+      "source": "MIT Tech Review AI",
+      "url": "https://www.technologyreview.com/2026/08/17/1142200/what-flocks-defenders-are-missing/",
+      "created_at": "2026-08-18 07:35:11"
+    },
+    {
+      "title_zh": "儿童机器人好友离世引发思考",
+      "summary_zh": "文章探讨儿童与机器人伙伴Moxie建立情感联系后，当机器人停止服务时，孩子如何面对失去，引发对AI情感陪伴伦理的讨论。",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "聚合"
+      },
+      "tags": [
+        "儿童机器人",
+        "情感陪伴",
+        "AI伦理"
+      ],
+      "importance_score": 8.0,
+      "source": "MIT Tech Review AI",
+      "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+      "created_at": "2026-08-18 07:35:13"
+    },
+    {
+      "title_zh": "Flock收紧车牌读取器规则应对监控争议",
+      "summary_zh": "警方科技巨头Flock宣布调整警官对其全国车牌读取器网络的访问权限，以平息日益增长的反对声浪，并赢回因大规模监控和警察滥用问题而失去的合同。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "车牌读取器",
+        "监控争议",
+        "警方科技"
+      ],
+      "importance_score": 8.0,
+      "source": "MIT Tech Review AI",
+      "url": "https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/",
+      "created_at": "2026-08-18 07:35:15"
+    },
+    {
+      "title_zh": "OpenRouter下调GPT-5.6 API费用50%",
+      "summary_zh": "OpenRouter宣布将OpenAI GPT-5.6Sol模型的API调用费用下调50%，输入价格从每百万Tokens 5美元降至2.5美元，输出从30美元降至15美元。同时，Vercel推出限时半价优惠，覆盖标准和Fast模式，优惠持续至2026年9月18日。",
+      "category": {
+        "l1": "厂商",
+        "l2": "聚合"
+      },
+      "tags": [
+        "OpenRouter",
+        "GPT-5.6",
+        "API降价"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30433",
+      "created_at": "2026-08-18 07:35:18"
+    },
+    {
+      "title_zh": "Vercel开源Zero语言，面向AI Agent",
+      "summary_zh": "Vercel Labs开源实验性语言Zero，专为AI Agent设计，以语义图取代文本作为源码。Agent查询程序图并提交带校验的patch，编译器直接接受或拒绝，人仅偶尔查看文本投影，实现编译器在循环内、人在循环外。项目已获5310星。",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "AI Agent",
+        "编程语言",
+        "开源"
+      ],
+      "importance_score": 8.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30432",
+      "created_at": "2026-08-18 07:35:20"
+    },
+    {
+      "title_zh": "Anthropic披露Model 2模型",
+      "summary_zh": "Anthropic发布风险报告，首次公开新模型Model 2，其性能超越当前最强AI，但增幅温和，旨在夯实基础。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "Anthropic",
+        "Model 2",
+        "AI模型"
+      ],
+      "importance_score": 8.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30431",
+      "created_at": "2026-08-18 07:35:21"
+    },
+    {
+      "title_zh": "昆仑万维发布Mureka V9.5，AI音乐转向人情味创作",
+      "summary_zh": "昆仑万维推出AI音乐生成模型Mureka V9.5，摒弃高音量高饱和路线，转向克制留白自然，深化自研MusiCoT音乐思维链框架，提升音乐自然度与耐听性，消除机械感。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "AI音乐",
+        "Mureka V9.5",
+        "昆仑万维"
+      ],
+      "importance_score": 8.0,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30430",
+      "created_at": "2026-08-18 07:35:23"
+    },
+    {
+      "title_zh": "AI版权诉讼升级：独立音乐商起诉Anthropic与Suno",
+      "summary_zh": "独立音乐出版商Round Hill Music起诉AI公司Anthropic与Suno，指控其未经授权使用数百首版权歌曲训练AI系统，涉及至少500首歌曲，索赔或超10亿美元，凸显AI版权争议持续升温。",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "AI版权",
+        "Anthropic",
+        "Suno"
+      ],
+      "importance_score": 8.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30429",
+      "created_at": "2026-08-18 07:35:26"
+    },
+    {
+      "title_zh": "雷鸟iO系列AI眼镜8月21日发布",
+      "summary_zh": "雷鸟创新宣布全新“雷鸟iO系列”首款产品iO AI眼镜将于8月21日发布，定位下一代个人智能终端，主打“人类增强AI眼镜”，旨在通过眼镜建立人与数字世界的自然交互，帮助用户看得更多、记得更牢、表达更好。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "雷鸟",
+        "AI眼镜",
+        "智能穿戴"
+      ],
+      "importance_score": 8.0,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30428",
+      "created_at": "2026-08-18 07:35:29"
+    },
+    {
+      "title_zh": "Ollmo v0.1.0发布：生产级RAG与Agent可视化平台",
+      "summary_zh": "Ollmo发布v0.1.0，定位面向私有化与团队协作的生产级RAG和Agent可视化平台。用户上传文档即可提问并获取带精准出处的答案，快速搭建私有知识库。架构前后端分离：后端Go+Fiber，前端Next.js+shadcn-ui，支持Docker一键部署，提供私有化交付与SaaS两种模式。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "RAG",
+        "Agent",
+        "可视化平台"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30427",
+      "created_at": "2026-08-18 07:35:31"
+    },
+    {
+      "title_zh": "谷歌AI重组内幕：布林督战，DeepMind权力洗牌",
+      "summary_zh": "路透社披露谷歌AI部门剧烈动荡：联合创始人布林重返一线干预模型训练，哈萨比斯被架空退居主席，两位Gemini创始技术负责人出走创业，折射DeepMind自2014年被收购以来自主权持续被侵蚀。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "谷歌",
+        "AI重组",
+        "DeepMind"
+      ],
+      "importance_score": 8.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30426",
+      "created_at": "2026-08-18 07:35:34"
+    },
+    {
+      "title_zh": "企业微信5.0.10打通AI Agent，开放十大办公能力",
+      "summary_zh": "企业微信5.0.10上线，全面开放CLI与MCP能力，支持WorkBuddy、Codex及企业自建Agent通过智能机器人接入，无规模限制，开放消息、文档等十大办公能力，为AI Agent提供企业级入口。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "企业微信",
+        "AI Agent",
+        "办公能力"
+      ],
+      "importance_score": 8.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30425",
+      "created_at": "2026-08-18 07:35:36"
+    },
+    {
+      "title_zh": "Anthropic年化营收破650亿美元，冲刺上市",
+      "summary_zh": "AI巨头Anthropic年化营收达650亿美元，较去年底增长超六倍，并加速推进美股上市进程。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "Anthropic",
+        "营收",
+        "上市"
+      ],
+      "importance_score": 8.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30424",
+      "created_at": "2026-08-18 07:35:38"
+    },
+    {
+      "title_zh": "谷歌收购精神航空数据，加码AI研发",
+      "summary_zh": "谷歌以1000万美元收购破产廉价航空精神航空的核心企业数据，击败出价750万美元的Mercor。数据涵盖2008年以来75亿条乘客交易记录，维度丰富，将用于AI与产品研发。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "谷歌",
+        "数据收购",
+        "AI研发"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30423",
+      "created_at": "2026-08-18 07:35:40"
+    },
+    {
+      "title_zh": "韩国年轻人用AI清算亲日历史",
+      "summary_zh": "韩国光复节，首尔“卖国贼嘲讽宴”吸引大量年轻人，排队3小时。亲日人物被制成梗饮品和周边，民间AI“亲日派扫描器”单日访问破200万，展现年轻世代用流行文化清算历史。",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "AI应用",
+        "历史清算",
+        "韩国"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30422",
+      "created_at": "2026-08-18 07:35:42"
+    },
+    {
+      "title_zh": "ChatGPT macOS新增计算机历史功能",
+      "summary_zh": "OpenAI为ChatGPT macOS应用新增“计算机历史”功能，可记录用户操作并生成时间线，供ChatGPT和Codex参考，以了解工作方式、提供自动化建议或协助完成任务。该功能默认关闭，用户可主动开启，并排除特定应用或网站，也可删除历史记录。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "macOS"
+      ],
+      "importance_score": 8.0,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30421",
+      "created_at": "2026-08-18 07:35:44"
+    },
+    {
+      "title_zh": "AI垃圾泛滥，科技巨头启动大扫除",
+      "summary_zh": "据《纽约时报》报道，低质AI内容泛滥，如谷歌现“胶水披萨”食谱、亚马逊充斥虚假传记、脸书遍布“虾仁耶稣”图。硅谷科技公司开始清理，但许多垃圾源自自家AI工具，如Spotify删除大量AI生成内容。",
+      "category": {
+        "l1": "行业",
+        "l2": "聚合"
+      },
+      "tags": [
+        "AI垃圾",
+        "内容治理",
+        "科技巨头"
+      ],
+      "importance_score": 8.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30420",
+      "created_at": "2026-08-18 07:35:46"
+    },
+    {
+      "title_zh": "Reddit测试AI视频功能",
+      "summary_zh": "Reddit正在测试AI新功能，可将文本帖子及评论自动转为音视频，AI语音朗读时原文同步高亮，并标注来源。已有旧帖被改编成视频，探索新内容消费方式。",
+      "category": {
+        "l1": "厂商",
+        "l2": "聚合"
+      },
+      "tags": [
+        "Reddit",
+        "AI视频",
+        "内容消费"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30419",
+      "created_at": "2026-08-18 07:35:49"
+    },
+    {
+      "title_zh": "字节清华推出CUDA Agent，AI学会优化GPU内核",
+      "summary_zh": "字节跳动与清华AIR联合发布CUDA Agent，通过智能体强化学习训练大模型编写高性能GPU内核，解决AI生成CUDA代码效率低的问题，在KernelBench基准上取得突破，标志着AI在底层代码优化领域的重要进展。",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "CUDA",
+        "大模型",
+        "GPU优化"
+      ],
+      "importance_score": 8.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30418",
+      "created_at": "2026-08-18 07:35:51"
+    },
+    {
+      "title_zh": "美团启动2027届校招，超八成岗位要求AI能力",
+      "summary_zh": "美团启动2027届校园招聘，面向2026年11月至2027年10月毕业生，开放10大类100余种岗位，新增AI全栈工程师等十余种AI原生岗位，超80%岗位要求AI相关能力。",
+      "category": {
+        "l1": "行业",
+        "l2": "聚合"
+      },
+      "tags": [
+        "美团",
+        "校园招聘",
+        "AI能力"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30417",
+      "created_at": "2026-08-18 07:35:53"
+    },
+    {
+      "title_zh": "AI自动化创企Relay倒闭，员工加入谷歌Chrome团队",
+      "summary_zh": "AI工作流明星创业公司Relay宣布关闭，付费服务9月14日终止，免费版8月中旬已停。创始人兼CEO Jacob Bank的新去向引人关注。该公司2021年创立，曾立志成为“新一代Zapier”，利用AI帮企业与个人简化工作流、处理日常琐事。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "Relay",
+        "AI自动化",
+        "谷歌"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30416",
+      "created_at": "2026-08-18 07:35:55"
+    },
+    {
+      "title_zh": "Cursor推出代码托管服务Origin，对标GitHub",
+      "summary_zh": "AI编程工具Cursor正式上线代码托管服务Origin，向付费用户开放测试版，支持仓库创建、拉取请求及与GitHub同步，旨在打造GitHub替代方案。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "Cursor",
+        "代码托管",
+        "GitHub"
+      ],
+      "importance_score": 8.0,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30415",
+      "created_at": "2026-08-18 07:35:58"
+    },
+    {
+      "title_zh": "宇树科技科创板上市，市值610亿",
+      "summary_zh": "宇树科技8月19日登陆科创板，发行价150.80元/股，市值约610亿元，市盈率219倍，中签率仅0.018%，成为科创板最难中签新股之一。2025年营收约17亿元，扣非净利润5.91亿元。",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "人形机器人",
+        "科创板",
+        "上市"
+      ],
+      "importance_score": 8.5,
+      "source": "AIBase",
+      "url": "https://www.aibase.com/zh/news/30414",
+      "created_at": "2026-08-18 07:36:00"
+    }
+  ]
+}

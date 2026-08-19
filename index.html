@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Hub · 市场情报与对标分析平台</title>
+
+  <!-- 引入 ECharts 图表库 & SheetJS Excel 导出库 -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <style>
+    /* 默认主题：科技蓝 + 白色 (Light Mode) */
+    :root {
+      --bg-main: #f4f7fc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --border-color: #e2e8f0;
+      --accent-blue: #2563eb;
+      --accent-purple: #7c3aed;
+      --accent-green: #059669;
+      --accent-yellow: #d97706;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --header-bg: rgba(255, 255, 255, 0.85);
+      --table-header-bg: #f1f5f9;
+      --input-bg: #f8fafc;
+      --card-shadow: 0 4px 16px rgba(37, 99, 235, 0.06);
+    }
+
+    /* 黑夜模式 (Dark Mode) */
+    [data-theme="dark"] {
+      --bg-main: #0b0f17;
+      --bg-card: #161b26;
+      --bg-card-hover: #1f2636;
+      --border-color: #232a3b;
+      --accent-blue: #3b82f6;
+      --accent-purple: #8b5cf6;
+      --accent-green: #10b981;
+      --accent-yellow: #f59e0b;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --header-bg: rgba(22, 27, 38, 0.85);
+      --table-header-bg: #111622;
+      --input-bg: #111622;
+      --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 60px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* 顶部主导航与模块锚点导航 */
+    header {
+      background: var(--header-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 32px;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      height: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo { font-size: 1.2rem; font-weight: bold; color: var(--text-main); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent-blue); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent-blue); font-weight: 600; }
+
+    .header-right { display: flex; align-items: center; gap: 12px; }
+    .status-badge { font-size: 0.8rem; padding: 4px 12px; background: rgba(37, 99, 235, 0.08); border: 1px solid var(--accent-blue); color: var(--accent-blue); border-radius: 20px; white-space: nowrap; }
+
+    /* 主题切换按钮 */
+    .theme-toggle-btn {
+      background: var(--input-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+    }
+
+    /* 主容器 */
+    .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+
+    /* 模块标题样式 */
+    .module-header { margin: 32px 0 20px 0; border-left: 4px solid var(--accent-blue); padding-left: 12px; }
+    .module-tag { font-size: 0.8rem; color: var(--accent-blue); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+    .module-title { font-size: 1.5rem; font-weight: 700; color: var(--text-main); }
+    .module-desc { font-size: 0.88rem; color: var(--text-muted); margin-top: 4px; }
+
+    /* 看板概览 */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; padding: 16px 20px; box-shadow: var(--card-shadow); transition: all 0.3s; }
+    .stat-number { font-size: 1.8rem; font-weight: bold; color: var(--accent-blue); }
+    .stat-label { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* 图表与排行榜面板 (Module 2 & 3) */
+    .m2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+    .panel-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; box-shadow: var(--card-shadow); transition: all 0.3s; }
+    .panel-title { font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; }
+
+    /* 矩阵对标表格 UI */
+    .table-wrapper { overflow-x: auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; }
+    .matrix-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; }
+    .matrix-table th, .matrix-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-color); white-space: nowrap; }
+    .matrix-table th { background: var(--table-header-bg); color: var(--text-main); font-weight: 600; position: sticky; top: 0; }
+    .matrix-table tr:hover { background: var(--bg-card-hover); }
+
+    /* 状态与标签 Badge */
+    .status-badge-full { color: var(--accent-green); background: rgba(5, 150, 105, 0.1); padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+    .status-badge-part { color: var(--accent-yellow); background: rgba(217, 119, 6, 0.1); padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+    .status-badge-none { color: var(--text-muted); background: rgba(100, 116, 139, 0.1); padding: 4px 8px; border-radius: 4px; }
+
+    .tag-open { color: #2563eb; background: rgba(37, 99, 235, 0.12); padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; border: 1px solid rgba(37, 99, 235, 0.3); }
+    .tag-closed { color: #db2777; background: rgba(219, 39, 119, 0.12); padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; border: 1px solid rgba(219, 39, 119, 0.3); }
+
+    /* 控件与筛选 */
+    .filter-bar { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; padding: 14px; margin-bottom: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; box-shadow: var(--card-shadow); }
+    .btn-group { display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-btn { background: var(--input-bg); border: 1px solid var(--border-color); color: var(--text-muted); padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+    .filter-btn.active, .filter-btn:hover { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+    .search-input { background: var(--input-bg); border: 1px solid var(--border-color); color: var(--text-main); padding: 6px 14px; border-radius: 6px; outline: none; font-size: 0.85rem; width: 220px; }
+    .btn-export { background: var(--accent-green); color: #fff; border: none; padding: 6px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
+
+    /* 资讯卡片流 */
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+    .news-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; min-height: 150px; box-shadow: var(--card-shadow); transition: all 0.2s; }
+    .news-card:hover { border-color: var(--accent-blue); transform: translateY(-2px); }
+    .news-title { font-size: 1rem; font-weight: 600; color: var(--text-main); text-decoration: none; margin-bottom: 8px; display: block; }
+    .news-title:hover { color: var(--accent-blue); }
+    .news-summary { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; }
+    .news-meta { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 10px; }
+
+    /* 分页控制器组件 */
+    .pagination-bar { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 24px; }
+
+    @media (max-width: 900px) { .m2-grid { grid-template-columns: 1fr; } }
+
+    /* 排行榜点击选中样式 */
+    .leaderboard-row:hover {
+      background-color: var(--bg-card-hover) !important;
+    }
+    .leaderboard-row.active-row {
+      background-color: rgba(37, 99, 235, 0.12) !important;
+      border-left: 3px solid var(--accent-blue);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部主导航栏 -->
+  <header>
+    <div class="header-inner">
+      <div class="logo"><span>AI HUB</span> · 市场情报与对标平台</div>
+      <ul class="nav-links">
+        <li><a href="#m1">Module 1 · 行业动态</a></li>
+        <li><a href="#m2">Module 2 · 聚合平台对标</a></li>
+        <li><a href="#m3">Module 3 · 模型能力与价格</a></li>
+      </ul>
+      <div class="header-right">
+        <div class="status-badge" id="update-status">每日 10:00 巡检更新</div>
+        <button class="theme-toggle-btn" id="theme-toggle-btn" onclick="toggleTheme()">
+          <span id="theme-icon">🌙</span> <span id="theme-text">深色模式</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- 概览数据统计 -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number" id="stat-news-count">0</div>
+        <div class="stat-label">今日情报条数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">8 家</div>
+        <div class="stat-label">深度对标聚合厂商</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">12 款</div>
+        <div class="stat-label">主流基座大模型对比</div>
+      </div>
+    </div>
+
+    <!-- MODULE 1: AI 行业动态与资讯流 -->
+    <section id="m1">
+      <div class="module-header">
+        <div class="module-tag">Module 1 · Industry Insights</div>
+        <div class="module-title">AI 行业洞察与生态动态</div>
+        <div class="module-desc">实时追踪原厂、聚合厂商与政策动态，支持关键词搜索与 Excel 导出。每页最多展示 9 条。</div>
+      </div>
+
+      <div class="filter-bar">
+        <div class="btn-group" id="category-filters">
+          <button class="filter-btn active" data-cat="ALL">全部分类</button>
+          <button class="filter-btn" data-cat="政策">政策</button>
+          <button class="filter-btn" data-cat="行业">行业</button>
+          <button class="filter-btn" data-cat="技术趋势">技术趋势</button>
+          <button class="filter-btn" data-cat="厂商">厂商</button>
+        </div>
+        <div class="btn-group">
+          <input type="text" id="search-input" class="search-input" placeholder="搜索标题或摘要...">
+          <button class="btn-export" onclick="exportExcel()">导出 Excel</button>
+        </div>
+      </div>
+
+      <!-- 资讯卡片列表 -->
+      <div class="news-grid" id="news-container"></div>
+
+      <!-- 分页栏组件 -->
+      <div class="pagination-bar" id="pagination-container"></div>
+    </section>
+
+    <!-- MODULE 2: AI 聚合平台能力对比排行榜 -->
+    <section id="m2">
+      <div class="module-header">
+        <div class="module-tag">Module 2 · Platform Matrix & Leaderboard</div>
+        <div class="module-title">AI 聚合平台与网关能力对比排行榜</div>
+        <div class="module-desc">面向产品与架构选型：6 维能力雷达评测 + 多家聚合厂商 26 项能力热力对标矩阵。</div>
+      </div>
+
+      <!-- 面板 1: 雷达图与能力排名 -->
+      <div class="m2-grid">
+        <div class="panel-card">
+          <div class="panel-title">
+              <span>🔌 聚合厂商 6 维综合能力雷达</span>
+              <span id="radar-subtitle" style="font-size: 0.75rem; color: var(--text-muted);">基准展示：OpenRouter</span>
+          </div>
+          <div id="radar-chart" style="width: 100%; height: 380px;"></div>
+        </div>
+
+        <div class="panel-card">
+          <div class="panel-title">🏆 聚合厂商综合能力排行</div>
+          <div class="table-wrapper" style="padding:0; border:none;">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>排名</th>
+                  <th>厂商名称</th>
+                  <th>类型</th>
+                  <th>综合得分</th>
+                  <th>核心优势</th>
+                </tr>
+              </thead>
+              <tbody id="leaderboard-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 面板 2: 26 项功能对标热力矩阵 -->
+      <div class="panel-card">
+        <div class="panel-title">
+          <span>🔍 聚合平台 26 项功能热力矩阵</span>
+          <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">
+            图例：<span class="status-badge-full">🟩 完整支持(2)</span>
+            <span class="status-badge-part">🟨 部分支持(1)</span>
+            <span class="status-badge-none">⬜ 无/不支持(0)</span>
+          </span>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>能力维度</th>
+                <th>细分功能指标 (26项)</th>
+                <th>OpenRouter</th>
+                <th>Portkey</th>
+                <th>Cloudflare</th>
+                <th>百度千帆</th>
+                <th>阿里云百炼</th>
+                <th>火山引擎 Ark</th>
+                <th>AWS Bedrock</th>
+                <th>移动云 MoMA</th>
+              </tr>
+            </thead>
+            <tbody id="matrix-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 3: 基础大模型智能能力评测与价格商业模式对标 -->
+    <section id="m3">
+      <div class="module-header" style="border-left-color: var(--accent-purple);">
+        <div class="module-tag" style="color: var(--accent-purple);">Module 3 · Model Intelligence & Commercial Benchmark</div>
+        <div class="module-title">大模型智能能力评测与价格商业模式对标</div>
+        <div class="module-desc">数据整合自 LMSYS Chatbot Arena、Artificial Analysis 与 LiveCodeBench 等权威评测，协助企业算力与 API 选型。</div>
+      </div>
+
+      <!-- 面板 1: 模型智能能力分布图 & 权威排行榜 -->
+      <div class="m2-grid">
+        <div class="panel-card">
+          <div class="panel-title">
+            <span>🧠 模型智能 ELO vs API 成本性价比象限</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">来源: LMSYS Arena / Artificial Analysis</span>
+          </div>
+          <div id="model-scatter-chart" style="width: 100%; height: 320px;"></div>
+        </div>
+
+        <div class="panel-card">
+          <div class="panel-title">
+            <span>🏆 顶尖大模型综合智能排行榜</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">依据 Arena ELO & MMLU-Pro</span>
+          </div>
+          <div class="table-wrapper" style="padding:0; border:none; max-height: 320px; overflow-y: auto;">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>排名</th>
+                  <th>模型名称</th>
+                  <th>厂商/开发者</th>
+                  <th>Arena ELO</th>
+                  <th>代码 (Pass@1)</th>
+                  <th>许可类型</th>
+                </tr>
+              </thead>
+              <tbody id="model-leaderboard-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 面板 2: 模型 API 价格、上下文窗口与商业模式对比表 -->
+      <div class="panel-card" style="margin-top: 20px;">
+        <div class="panel-title">
+          <span>💰 模型 API 价格、上下文与商业模式对标矩阵</span>
+          <div class="btn-group" id="model-type-filters">
+            <button class="filter-btn active" data-type="ALL">全部模型</button>
+            <button class="filter-btn" data-type="FLAGSHIP">旗舰闭源 API</button>
+            <button class="filter-btn" data-type="OPEN">开源可商用模型</button>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>模型名称</th>
+                <th>开发者</th>
+                <th>上下文窗口 (Context)</th>
+                <th>输入价格 (每1M Token)</th>
+                <th>输出价格 (每1M Token)</th>
+                <th>Prompt 缓存优惠</th>
+                <th>商业模式 / 开源许可</th>
+                <th>企业级特性支持</th>
+              </tr>
+            </thead>
+            <tbody id="model-pricing-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // 全局数据与状态句柄
+    let rawNews = [];
+    let filteredNews = [];
+    let currentPage = 1;
+    const itemsPerPage = 9; // 每页最多展示 9 条资讯
+
+    // ECharts 实例引用
+    let radarChartInstance = null;
+    let scatterChartInstance = null;
+
+    // Fallback 本地备用资讯数据
+    const fallbackData = {
+      "last_updated": "2026-08-17 10:00:00",
+      "news": [
+        { "title_zh": "OpenAI 推出 API 智能路由与 Token 降本策略", "summary_zh": "官方引入动态缓存命中降价机制，并支持跨模型自动 Failover 切换，进一步降低企业集成门槛。", "category": { "l1": "厂商" }, "source": "OpenAI Blog", "region": "北美洲", "importance_score": 9.0, "url": "https://openai.com" },
+        { "title_zh": "移动云 MoMA 与天翼云星辰 MaaS 完成多模型路由升级", "summary_zh": "国内主流运营商聚合平台补齐了 API Key 池化管理与企业级 RBAC 审计日志功能。", "category": { "l1": "技术趋势" }, "source": "通信产业网", "region": "中国内地", "importance_score": 8.5, "url": "https://10086.cn" },
+        { "title_zh": "工信部发布 AI 大模型产业合规与安全评估指引", "summary_zh": "指引对生成式 AI 的数据预处理、隐私保护及算法可解释性提出了更加明确的审查标准。", "category": { "l1": "政策" }, "source": "工信部", "region": "中国内地", "importance_score": 9.2, "url": "https://miit.gov.cn" },
+        { "title_zh": "DeepSeek 发布 R1 系列推理大模型开源权重", "summary_zh": "在数学推理与代码生成领域性能接近顶尖闭源模型，引发业界私有化部署热潮。", "category": { "l1": "行业" }, "source": "开源社区", "region": "全球", "importance_score": 9.5, "url": "https://deepseek.com" },
+        { "title_zh": "Anthropic 推出 Prompt Caching 90% 降本长文本 API", "summary_zh": "支持在重复传入长提示词时自动命中服务器缓存，大幅缩短首 Token 延迟。", "category": { "l1": "厂商" }, "source": "Anthropic", "region": "北美洲", "importance_score": 8.8, "url": "https://anthropic.com" },
+        { "title_zh": "欧洲 AI Act 阶段性实施细则正式落地生效", "summary_zh": "针对高风险 AI 系统建立分类分级监管，对模型透明度提出强制披露要求。", "category": { "l1": "政策" }, "source": "EUR-Lex", "region": "欧洲", "importance_score": 8.7, "url": "https://europa.eu" },
+        { "title_zh": "阿里云百炼平台升级全链路 Token 治理看板", "summary_zh": "面向企业客户推出多部门 API 额度切分、异构模型成本账单可视化管理。", "category": { "l1": "厂商" }, "source": "阿里云", "region": "中国内地", "importance_score": 8.3, "url": "https://aliyun.com" },
+        { "title_zh": "LiveCodeBench 发布最新基座模型代码能力排行榜", "summary_zh": "最新榜单显示，开源模型在复杂算法题解决效率上正加速赶超闭源模型。", "category": { "l1": "技术趋势" }, "source": "LiveCodeBench", "region": "全球", "importance_score": 8.6, "url": "https://livecodebench.github.io" },
+        { "title_zh": "Google 宣布 Vertex AI 全面支持 Gemini 1.5 长上下文微调", "summary_zh": "企业可以基于自身私有语料库对 2M Token 超长窗口模型进行领域专属微调。", "category": { "l1": "厂商" }, "source": "Google Cloud", "region": "北美洲", "importance_score": 8.4, "url": "https://cloud.google.com" },
+        { "title_zh": "Meta 发布 Llama 3.3 70B 开源商业化授权说明", "summary_zh": "进一步放宽中小企业免费商用门槛，并优化了推理时显存占用率。", "category": { "l1": "行业" }, "source": "Meta AI", "region": "北美洲", "importance_score": 8.9, "url": "https://meta.com" }
+      ]
+    };
+
+    // 26 项热力矩阵 Mock 数据
+    const matrixData = [
+      { category: "基础路由", feature: "多模型统一 API 接入", scores: [2, 2, 2, 2, 2, 2, 2, 2] },
+      { category: "基础路由", feature: "自动故障转移 (Failover)", scores: [2, 2, 2, 1, 1, 1, 2, 1] },
+      { category: "基础路由", feature: "语义路由与负载均衡", scores: [2, 2, 2, 1, 1, 2, 1, 0] },
+      { category: "性能优化", feature: "Prompt / Response 缓存", scores: [2, 2, 2, 2, 2, 2, 1, 1] },
+      { category: "安全合规", feature: "敏感词拦截与脱敏", scores: [1, 2, 2, 2, 2, 2, 2, 2] },
+      { category: "安全合规", feature: "数据不出域 (私有部署)", scores: [0, 1, 2, 2, 1, 1, 2, 2] },
+      { category: "计费运营", feature: "API Key 额度与预算控制", scores: [2, 2, 2, 2, 2, 2, 2, 1] },
+      { category: "计费运营", feature: "后付费 / 统一对账单", scores: [2, 2, 1, 2, 2, 2, 2, 2] }
+    ];
+
+    // 聚合厂商排行榜数据
+    const leaderboardData = [
+      { rank: 1, name: "OpenRouter", type: "海外聚合标杆", score: "9.4", highlight: "模型广度极高、实时切控" },
+      { rank: 2, name: "Portkey", type: "企业级 Gateway", score: "9.1", highlight: "可观测性与治理能力顶尖" },
+      { rank: 3, name: "Cloudflare AI Gateway", type: "边缘网络网关", score: "8.9", highlight: "边缘节点缓存、零延迟防护" },
+      { rank: 4, name: "百度智能云千帆", type: "国内头部 MaaS", score: "8.7", highlight: "精调工具链与文心生态" },
+      { rank: 5, name: "阿里云百炼", type: "国内头部原厂", score: "8.6", highlight: "生态丰富，高并发 SLA" },
+      { rank: 6, name: "火山引擎 Ark", type: "字节 MaaS", score: "8.5", highlight: "极高吞吐与多模型动态路由" },
+      { rank: 7, name: "AWS Bedrock", type: "海外云巨头", score: "8.4", highlight: "顶级企业合规与 Agent 编排" },
+      { rank: 8, name: "移动云 MoMA", type: "运营商 MaaS", score: "8.2", highlight: "国资云合规，专线网络" }
+    ];
+
+    // Module 3 模型能力数据
+    const modelBenchmarkData = [
+      { rank: 1, name: "GPT-4o (2024-08-06)", vendor: "OpenAI", category: "FLAGSHIP", elo: 1286, codeScore: "85.2%", context: "128K Tokens", inputPrice: "$2.50", outputPrice: "$10.00", cacheDiscount: "50% 折扣 ($1.25)", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "Fine-tuning / PTU / 零数据留存" },
+      { rank: 2, name: "Claude 3.5 Sonnet", vendor: "Anthropic", category: "FLAGSHIP", elo: 1282, codeScore: "92.0%", context: "200K Tokens", inputPrice: "$3.00", outputPrice: "$15.00", cacheDiscount: "90% 折扣 ($0.30)", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "Prompt Caching / AWS Bedrock 集成" },
+      { rank: 3, name: "DeepSeek-V3 / R1", vendor: "DeepSeek", category: "OPEN", elo: 1278, codeScore: "89.1%", context: "64K ~ 128K", inputPrice: "$0.14", outputPrice: "$0.28", cacheDiscount: "50% 折扣 ($0.07)", licenseType: "MIT / 开源可商用", isOpen: true, enterpriseFeatures: "权重开源 / 支持完全私有部署" },
+      { rank: 4, name: "Gemini 1.5 Pro", vendor: "Google", category: "FLAGSHIP", elo: 1260, codeScore: "84.1%", context: "2,000K (2M)", inputPrice: "$3.50", outputPrice: "$10.50", cacheDiscount: "75% 折扣 ($0.875)", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "超长上下文 / Vertex AI 企业合规" },
+      { rank: 5, name: "Qwen2.5-72B-Instruct", vendor: "阿里云 (Alibaba)", category: "OPEN", elo: 1252, codeScore: "86.5%", context: "128K Tokens", inputPrice: "$0.40", outputPrice: "$1.20", cacheDiscount: "无 / 统一对折特惠", licenseType: "Qwen License / 允许商用", isOpen: true, enterpriseFeatures: "模型蒸馏 / 百炼云托管&私有化" },
+      { rank: 6, name: "Llama 3.3 70B Instruct", vendor: "Meta", category: "OPEN", elo: 1240, codeScore: "81.0%", context: "128K Tokens", inputPrice: "$0.30", outputPrice: "$0.60", cacheDiscount: "N/A (依赖第三方平台)", licenseType: "Llama 3 Community", isOpen: true, enterpriseFeatures: "生态完善 / 极为丰富微调工具链" },
+      { rank: 7, name: "GPT-4o-mini", vendor: "OpenAI", category: "FLAGSHIP", elo: 1215, codeScore: "77.2%", context: "128K Tokens", inputPrice: "$0.15", outputPrice: "$0.60", cacheDiscount: "50% 折扣 ($0.075)", licenseType: "闭源 API", isOpen: false, enterpriseFeatures: "超高吞吐率 / 经济型逻辑处理" }
+    ];
+
+    // 主题切换控制
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      document.documentElement.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('theme', nextTheme);
+
+      updateThemeUI(nextTheme);
+      // 重新渲染 ECharts 图表适应主题
+      initRadarChart();
+      initModelScatterChart();
+    }
+
+    function updateThemeUI(theme) {
+      const iconSpan = document.getElementById('theme-icon');
+      const textSpan = document.getElementById('theme-text');
+      if (theme === 'dark') {
+        iconSpan.innerText = '☀️';
+        textSpan.innerText = '日间模式';
+      } else {
+        iconSpan.innerText = '🌙';
+        textSpan.innerText = '深色模式';
+      }
+    }
+
+    // 初始化主题
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      updateThemeUI(savedTheme);
+    }
+// 统一多维组合筛选函数（分类与搜索框取交集）
+    function applyFilters() {
+      const activeBtn = document.querySelector('#category-filters .filter-btn.active');
+      const selectedCat = activeBtn ? activeBtn.dataset.cat : 'ALL';
+      const kw = document.getElementById('search-input').value.trim().toLowerCase();
+
+      filteredNews = rawNews.filter(item => {
+        // 条件 1: 匹配分类
+        const matchCategory = selectedCat === 'ALL' || item.category?.l1 === selectedCat;
+        // 条件 2: 匹配搜索关键字
+        const matchKeyword = !kw ||
+          (item.title_zh && item.title_zh.toLowerCase().includes(kw)) ||
+          (item.summary_zh && item.summary_zh.toLowerCase().includes(kw));
+
+        return matchCategory && matchKeyword;
+      });
+
+      currentPage = 1; // 每次筛选重置回第 1 页
+      renderNews();
+    }
+    // 1. 读取本地 data.json
+    function loadData() {
+      fetch('./data.json')
+        .then(res => {
+          if (!res.ok) throw new Error("File not found");
+          return res.json();
+        })
+        .then(data => {
+          rawNews = data.news || [];
+          document.getElementById('stat-news-count').innerText = rawNews.length;
+          document.getElementById('update-status').innerText = `最后更新: ${data.last_updated || '刚刚'}`;
+          applyFilters(); // 使用统一筛选初始化渲染
+        })
+        .catch(err => {
+          console.warn("⚠️ 读取 data.json 失败，改用 Fallback 模拟数据展示:", err);
+          rawNews = fallbackData.news;
+          document.getElementById('stat-news-count').innerText = rawNews.length;
+          applyFilters(); // 使用统一筛选初始化渲染
+        });
+    }
+
+    // 2. 渲染资讯卡片与分页 (Module 1 - 支持分页每页 9 条)
+    function renderNews() {
+      const container = document.getElementById('news-container');
+      const paginationContainer = document.getElementById('pagination-container');
+
+      if (!filteredNews.length) {
+        container.innerHTML = `<div style="grid-column:1/-1; text-align:center; color:var(--text-muted); padding:30px;">暂无符合条件的数据</div>`;
+        paginationContainer.innerHTML = '';
+        return;
+      }
+
+      // 计算总页数与当前页数据切片
+      const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const paginatedItems = filteredNews.slice(startIndex, startIndex + itemsPerPage);
+
+      // 渲染 9 条卡片
+      container.innerHTML = paginatedItems.map(item => `
+        <div class="news-card">
+          <div>
+            <a href="${item.url}" target="_blank" class="news-title">${item.title_zh}</a>
+            <div class="news-summary">${item.summary_zh}</div>
+          </div>
+          <div class="news-meta">
+            <span>📍 ${item.source}</span>
+            <span style="color:var(--accent-green); font-weight:600;">★ ${item.importance_score || '8.0'}</span>
+          </div>
+        </div>
+      `).join('');
+
+      // 渲染分页按钮
+      renderPagination(totalPages);
+    }
+
+    // 动态渲染页码切换器
+    function renderPagination(totalPages) {
+      const nav = document.getElementById('pagination-container');
+      if (totalPages <= 1) {
+        nav.innerHTML = '';
+        return;
+      }
+
+      let btnHtml = '';
+
+      // 上一页
+      btnHtml += `<button class="filter-btn" ${currentPage === 1 ? 'disabled style="opacity:0.4; cursor:not-allowed;"' : ''} onclick="changePage(${currentPage - 1})">上一页</button>`;
+
+      // 页码数字
+      for (let i = 1; i <= totalPages; i++) {
+        btnHtml += `<button class="filter-btn ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+      }
+
+      // 下一页
+      btnHtml += `<button class="filter-btn" ${currentPage === totalPages ? 'disabled style="opacity:0.4; cursor:not-allowed;"' : ''} onclick="changePage(${currentPage + 1})">下一页</button>`;
+
+      nav.innerHTML = btnHtml;
+    }
+
+    // 页码跳转函数
+    function changePage(page) {
+      currentPage = page;
+      renderNews();
+      document.getElementById('m1').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 3. 渲染 26 项热力矩阵表 (Module 2)
+    function renderMatrix() {
+      const tbody = document.getElementById('matrix-body');
+      const renderScore = (score) => {
+        if (score === 2) return `<span class="status-badge-full">🟩 2</span>`;
+        if (score === 1) return `<span class="status-badge-part">🟨 1</span>`;
+        return `<span class="status-badge-none">⬜ 0</span>`;
+      };
+
+      tbody.innerHTML = matrixData.map(row => `
+        <tr>
+          <td style="color:var(--text-muted);">${row.category}</td>
+          <td style="font-weight:600; color:var(--text-main);">${row.feature}</td>
+          ${row.scores.map(s => `<td>${renderScore(s)}</td>`).join('')}
+        </tr>
+      `).join('');
+    }
+
+    // 4. 渲染排行榜 (Module 2)
+    const vendorRadarScores = {
+      "OpenRouter": [4.9, 4.8, 4.7, 4.0, 4.8, 4.6],
+      "Portkey": [3.8, 4.9, 4.8, 4.9, 4.2, 4.9],
+      "Cloudflare AI Gateway": [4.2, 4.6, 4.3, 4.8, 4.5, 4.9],
+      "百度智能云千帆": [4.6, 4.3, 4.5, 4.7, 4.1, 4.7],
+      "阿里云百炼": [4.5, 4.2, 4.4, 4.7, 4.3, 4.8],
+      "火山引擎 Ark": [4.4, 4.2, 4.3, 4.6, 4.4, 4.8],
+      "AWS Bedrock": [4.3, 4.7, 4.5, 5.0, 3.9, 4.9],
+      "移动云 MoMA": [3.5, 3.8, 3.9, 4.2, 4.5, 4.0],
+    };
+
+    // 当前点选选中的对标厂商 (默认仅 OpenRouter)
+    let currentSelectedVendor = 'OpenRouter';
+
+    function renderLeaderboard() {
+      const tbody = document.getElementById('leaderboard-body');
+      tbody.innerHTML = leaderboardData.map(item => {
+        const isSelected = item.name === currentSelectedVendor;
+        return `
+          <tr class="leaderboard-row ${isSelected ? 'active-row' : ''}"
+              onclick="selectVendorForRadar('${item.name}')"
+              style="cursor: pointer; transition: background 0.2s;">
+            <td style="font-weight:bold; color:var(--accent-blue);">#${item.rank}</td>
+            <td style="font-weight:600; color:var(--text-main);">${item.name}</td>
+            <td><span style="font-size:0.75rem; background:var(--input-bg); border:1px solid var(--border-color); padding:2px 6px; border-radius:4px; color:var(--text-muted);">${item.type}</span></td>
+            <td style="color:var(--accent-green); font-weight:bold;">${item.score}</td>
+            <td style="color:var(--text-muted); font-size:0.8rem;">${item.highlight}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // 厂商点选回调函数
+    function selectVendorForRadar(vendorName) {
+      currentSelectedVendor = vendorName;
+      renderLeaderboard(); // 重新渲染高亮行
+      initRadarChart(vendorName); // 刷新雷达图对比
+    }
+        // 5. 初始化 ECharts 雷达图 (Module 2)
+    function initRadarChart(compareVendor = currentSelectedVendor) {
+      const chartDom = document.getElementById('radar-chart');
+      if (radarChartInstance) radarChartInstance.dispose();
+
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const textColor = isDark ? '#9ca3af' : '#475569';
+      const splitLineColor = isDark ? '#232a3b' : '#e2e8f0';
+
+      // 动态更新面板右上角提示词
+      const subtitleEl = document.getElementById('radar-subtitle');
+      if (subtitleEl) {
+        subtitleEl.innerText = (compareVendor && compareVendor !== 'OpenRouter')
+          ? `对标对比：OpenRouter vs ${compareVendor}`
+          : `基准展示：OpenRouter`;
+      }
+
+      // 构建雷达图数据集
+      const seriesData = [
+        {
+          value: vendorRadarScores["OpenRouter"],
+          name: 'OpenRouter (基线)',
+          itemStyle: { color: '#2563eb' }
+        }
+      ];
+
+      // 若选中的不是 OpenRouter 本身，则追加对比项
+      if (compareVendor && compareVendor !== 'OpenRouter' && vendorRadarScores[compareVendor]) {
+        seriesData.push({
+          value: vendorRadarScores[compareVendor],
+          name: compareVendor,
+          itemStyle: { color: '#10b981' }
+        });
+      }
+
+      radarChartInstance = echarts.init(chartDom);
+
+      const option = {
+        backgroundColor: 'transparent',
+        tooltip: {},
+        legend: {
+          bottom: 0,
+          left: 'center',
+          itemGap: 24,
+          textStyle: { color: textColor, fontSize: 12 }
+        },
+        radar: {
+          center: ['50%', '43%'],
+          radius: '60%',
+          indicator: [
+            { name: '模型接入量', max: 5 },
+            { name: '路由与对账', max: 5 },
+            { name: '功能完整性', max: 5 },
+            { name: '安全与脱敏', max: 5 },
+            { name: '计费灵活性', max: 5 },
+            { name: 'SLA 可用性', max: 5 }
+          ],
+          axisName: { color: textColor, fontSize: 11 },
+          splitLine: { lineStyle: { color: splitLineColor } },
+          splitArea: { show: false }
+        },
+        series: [{
+          type: 'radar',
+          data: seriesData
+        }]
+      };
+
+      radarChartInstance.setOption(option);
+    }
+
+    // 6. 渲染 Module 3: 大模型智能排行榜 & 价格矩阵
+    function renderModelBenchmark(typeFilter = 'ALL') {
+      const filtered = typeFilter === 'ALL'
+        ? modelBenchmarkData
+        : modelBenchmarkData.filter(m => m.category === typeFilter);
+
+      const leaderboardBody = document.getElementById('model-leaderboard-body');
+      leaderboardBody.innerHTML = modelBenchmarkData.map(m => `
+        <tr>
+          <td style="font-weight:bold; color:var(--accent-purple);">#${m.rank}</td>
+          <td style="font-weight:600; color:var(--text-main);">${m.name}</td>
+          <td style="color:var(--text-muted);">${m.vendor}</td>
+          <td style="color:var(--accent-green); font-weight:bold;">${m.elo}</td>
+          <td style="color:var(--accent-blue); font-weight:600;">${m.codeScore}</td>
+          <td>${m.isOpen ? '<span class="tag-open">开源可商用</span>' : '<span class="tag-closed">闭源 API</span>'}</td>
+        </tr>
+      `).join('');
+
+      const pricingBody = document.getElementById('model-pricing-body');
+      pricingBody.innerHTML = filtered.map(m => `
+        <tr>
+          <td style="font-weight:600; color:var(--text-main);">${m.name}</td>
+          <td style="color:var(--text-muted);">${m.vendor}</td>
+          <td><span style="background:var(--input-bg); border:1px solid var(--border-color); padding:2px 8px; border-radius:4px; font-size:0.8rem; color:var(--text-main);">${m.context}</span></td>
+          <td style="color:var(--accent-green); font-weight:600;">${m.inputPrice}</td>
+          <td style="color:var(--accent-yellow); font-weight:600;">${m.outputPrice}</td>
+          <td style="color:var(--text-muted); font-size:0.8rem;">${m.cacheDiscount}</td>
+          <td>${m.isOpen ? `<span class="tag-open">${m.licenseType}</span>` : `<span class="tag-closed">${m.licenseType}</span>`}</td>
+          <td style="color:var(--text-muted); font-size:0.8rem;">${m.enterpriseFeatures}</td>
+        </tr>
+      `).join('');
+    }
+
+    // 7. 初始化 Module 3 散点图
+    function initModelScatterChart() {
+      const chartDom = document.getElementById('model-scatter-chart');
+      if (scatterChartInstance) scatterChartInstance.dispose();
+
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const textColor = isDark ? '#9ca3af' : '#475569';
+      const splitLineColor = isDark ? '#232a3b' : '#e2e8f0';
+
+      scatterChartInstance = echarts.init(chartDom);
+
+      const seriesData = [
+        { name: 'DeepSeek-V3', value: [0.14, 1278], vendor: 'DeepSeek (开源)' },
+        { name: 'GPT-4o-mini', value: [0.15, 1215], vendor: 'OpenAI' },
+        { name: 'Llama-3.3-70B', value: [0.30, 1240], vendor: 'Meta (开源)' },
+        { name: 'Qwen2.5-72B', value: [0.40, 1252], vendor: 'Alibaba (开源)' },
+        { name: 'GPT-4o', value: [2.50, 1286], vendor: 'OpenAI' },
+        { name: 'Claude 3.5 Sonnet', value: [3.00, 1282], vendor: 'Anthropic' },
+        { name: 'Gemini 1.5 Pro', value: [3.50, 1260], vendor: 'Google' }
+      ];
+
+      const option = {
+        backgroundColor: 'transparent',
+        grid: { top: 30, right: 40, bottom: 65, left: 60 },
+        tooltip: {
+          formatter: function (params) {
+            return `<b>${params.data.name}</b> (${params.data.vendor})<br/>
+                    输入价格: $${params.data.value[0]} / 1M Tokens<br/>
+                    Arena ELO 得分: <b>${params.data.value[1]}</b>`;
+          }
+        },
+        xAxis: {
+          name: '每1M Token输入成本($)',
+          nameLocation: 'middle',
+          nameGap: 35,
+          type: 'value',
+          axisLabel: { color: textColor },
+          splitLine: { lineStyle: { color: splitLineColor } }
+        },
+        yAxis: {
+          name: 'LMSYS Arena ELO',
+          type: 'value',
+          min: 1200,
+          max: 1300,
+          axisLabel: { color: textColor },
+          splitLine: { lineStyle: { color: splitLineColor } }
+        },
+        series: [{
+          type: 'scatter',
+          symbolSize: 18,
+          data: seriesData,
+          itemStyle: {
+            color: function(params) {
+              return params.data.vendor.includes('开源') ? '#2563eb' : '#7c3aed';
+            }
+          },
+          label: {
+            show: true,
+            formatter: '{b}',
+            position: 'top',
+            color: isDark ? '#f3f4f6' : '#0f172a',
+            fontSize: 10
+          }
+        }]
+      };
+
+      scatterChartInstance.setOption(option);
+    }
+
+    // 窗口大小响应
+    window.addEventListener('resize', () => {
+      if (radarChartInstance) radarChartInstance.resize();
+      if (scatterChartInstance) scatterChartInstance.resize();
+    });
+
+    // 8. 交互事件监听
+    // 资讯分类筛选按钮
+    document.getElementById('category-filters').addEventListener('click', (e) => {
+      if (!e.target.classList.contains('filter-btn')) return;
+      document.querySelectorAll('#category-filters .filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+
+      applyFilters(); // 触发组合筛选
+    });
+
+    // 资讯实时搜索框
+    document.getElementById('search-input').addEventListener('input', () => {
+      applyFilters(); // 触发组合筛选
+    });
+
+    // Module 3 筛选按钮
+    document.getElementById('model-type-filters').addEventListener('click', (e) => {
+      if (!e.target.classList.contains('filter-btn')) return;
+      document.querySelectorAll('#model-type-filters .filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+
+      const type = e.target.dataset.type;
+      renderModelBenchmark(type);
+    });
+
+    // Excel 导出
+    function exportExcel() {
+      const worksheet = XLSX.utils.json_to_sheet(filteredNews.map(i => ({
+        "标题": i.title_zh,
+        "摘要": i.summary_zh,
+        "分类": i.category?.l1 || '',
+        "来源": i.source,
+        "链接": i.url
+      })));
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "AI情报分析");
+      XLSX.writeFile(workbook, `AI_Hub_Export_${new Date().toISOString().slice(0,10)}.xlsx`);
+    }
+
+    // 初始化启动
+    window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      loadData();
+      renderMatrix();
+      renderLeaderboard();
+      initRadarChart();
+
+      renderModelBenchmark();
+      initModelScatterChart();
+    });
+  </script>
+</body>
+</html>
