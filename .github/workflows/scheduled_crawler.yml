@@ -37,7 +37,8 @@ jobs:
         env:
             DEEK_SEEK_API_KEY: ${{ secrets.DEEK_SEEK_API_KEY }}
         run: |
-          python scripts/fetch_and_process.py
+          # python scripts/fetch_and_process.py
+          python scripts/process_no_ai.py
 
       - name: 5. 提交并推送更新后的 data.json
         run: |
