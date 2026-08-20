@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-08-20 03:59:16",
-  "total_count": 100,
+  "last_updated": "2026-08-20 08:57:09",
+  "total_count": 103,
   "news": [
+    {
+      "title_zh": "宇树科技上市首日大涨629%",
+      "summary_zh": "宇树科技上市首日大涨629%，世界机器人大会里谁是“下一个宇树”；这几个玩家或可被“押注”",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "机器人",
+        "科技",
+        "大会"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/476120.html",
+      "pub_date": "2026-08-20 06:17:10",
+      "created_at": "2026-08-20 08:57:09"
+    },
+    {
+      "title_zh": "MiniMax核心工程负责人阿岛离职",
+      "summary_zh": "MiniMax核心工程负责人阿岛离职；从技术研发到开发者沟通，长期活跃在开发者一线",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "阿岛",
+        "离职",
+        "开发者"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/475869.html",
+      "pub_date": "2026-08-19 08:23:05",
+      "created_at": "2026-08-20 08:57:09"
+    },
+    {
+      "title_zh": "具身数据底座开卖",
+      "summary_zh": "具身数据底座开卖，首发5100元：机器人训练数据有了新解法；构建全栈物理AI基础设施",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "数据",
+        "解法",
+        "物理"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/475477.html",
+      "pub_date": "2026-08-19 07:42:27",
+      "created_at": "2026-08-20 08:57:09"
+    },
     {
       "title_zh": "从协助到执行：企业如何让AI发挥作用",
       "summary_zh": "从协助到执行：企业如何让AI发挥作用；OpenAI 研究揭示了企业如何利用 ChatGPT 和 Codex 采用代理人工智能，以及前沿公司如何在人工智能采用方面取得领先",
