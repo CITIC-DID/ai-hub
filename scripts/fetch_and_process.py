@@ -2,7 +2,7 @@
 import os
 import json
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 from datetime import timedelta
 import feedparser
 from openai import OpenAI
