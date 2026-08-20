@@ -405,7 +405,7 @@ def process_without_ai(raw_item: dict) -> dict:
         "region": raw_item.get('region', '中国'),
         "url": raw_item.get('url', '#'),
         "pub_date": raw_item.get('pub_time', datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
-        "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        "created_at": datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
     }
 
 # ==================== 数据持久化与主流程 ====================
