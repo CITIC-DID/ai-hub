@@ -1,7 +1,178 @@
 {
-  "last_updated": "2026-08-20 03:19:35",
-  "total_count": 91,
+  "last_updated": "2026-08-20 03:59:16",
+  "total_count": 100,
   "news": [
+    {
+      "title_zh": "从协助到执行：企业如何让AI发挥作用",
+      "summary_zh": "从协助到执行：企业如何让AI发挥作用；OpenAI 研究揭示了企业如何利用 ChatGPT 和 Codex 采用代理人工智能，以及前沿公司如何在人工智能采用方面取得领先",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "企业",
+        "人工智能",
+        "采用"
+      ],
+      "importance_score": 7.5,
+      "source": "OpenAI Blog",
+      "region": "北美洲",
+      "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
+      "pub_date": "2026-08-12 06:00:00",
+      "created_at": "2026-08-20 03:59:15"
+    },
+    {
+      "title_zh": "RingCentral 如何构建从工程到运营的 AI 原生工作",
+      "summary_zh": "RingCentral 如何构建从工程到运营的 AI 原生工作；了解 RingCentral 如何使用 ChatGPT Work 和 Codex 来加速 AI 产品开发并集中整个工程和运营的运营智能",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "运营",
+        "工程",
+        "工作"
+      ],
+      "importance_score": 7.5,
+      "source": "OpenAI Blog",
+      "region": "北美洲",
+      "url": "https://openai.com/index/ringcentral",
+      "pub_date": "2026-08-12 00:00:00",
+      "created_at": "2026-08-20 03:59:15"
+    },
+    {
+      "title_zh": "在 ChatGPT 中测试广告",
+      "summary_zh": "在 ChatGPT 中测试广告；OpenAI 开始在 ChatGPT 中测试广告，以支持免费访问，具有清晰的标签、答案独立性、强大的隐私保护和用户控制",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "广告",
+        "支持",
+        "具有"
+      ],
+      "importance_score": 7.5,
+      "source": "OpenAI Blog",
+      "region": "北美洲",
+      "url": "https://openai.com/index/testing-ads-in-chatgpt",
+      "pub_date": "2026-08-11 10:00:00",
+      "created_at": "2026-08-20 03:59:15"
+    },
+    {
+      "title_zh": "Gemini Robotics ER 2",
+      "summary_zh": "Gemini Robotics ER 2：通过视频理解、任务编排和多机器人协作为机器人技术提供动力；Gemini Robotics ER 2 帮助机器人推理、协作和解决现实世界的任务",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "机器人",
+        "协作",
+        "编排"
+      ],
+      "importance_score": 6.0,
+      "source": "Google DeepMind",
+      "region": "全球",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+      "pub_date": "2026-07-30 15:00:59",
+      "created_at": "2026-08-20 03:59:16"
+    },
+    {
+      "title_zh": "我们将在 Google Flow Music 中推出 Lyria 3.5",
+      "summary_zh": "我们将在 Google Flow Music 中推出 Lyria 3.5，该版本在音乐性、歌词、人声和创意控制方面都取得了进步；我们将在 Google Flow Music 中推出 Lyria ...",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "人声",
+        "创意",
+        "歌词"
+      ],
+      "importance_score": 6.8,
+      "source": "Google DeepMind",
+      "region": "全球",
+      "url": "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/",
+      "pub_date": "2026-07-29 16:02:10",
+      "created_at": "2026-08-20 03:59:16"
+    },
+    {
+      "title_zh": "Gemini Robotics 2 为机器人带来全身...",
+      "summary_zh": "Gemini Robotics 2 为机器人带来全身智能；Gemini Robotics 2 为机器人带来全身智能",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "机器人",
+        "智能",
+        "带来"
+      ],
+      "importance_score": 5.0,
+      "source": "Google DeepMind",
+      "region": "全球",
+      "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "pub_date": "2026-07-28 13:21:37",
+      "created_at": "2026-08-20 03:59:16"
+    },
+    {
+      "title_zh": "章鱼动力亮相WRC 2026",
+      "summary_zh": "章鱼动力亮相WRC 2026，携“脑-手-数据”技术体系探索具身智能未来范式；章鱼动力亮相WRC 2026，携“脑-手-数据”技术体系探索具身智能未来范式",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "探索",
+        "智能",
+        "具身"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/475931.html",
+      "pub_date": "2026-08-19 10:54:07",
+      "created_at": "2026-08-20 03:59:16"
+    },
+    {
+      "title_zh": "全球首个人形机器人自主乒乓球完整对局亮相2026世界机器人大会",
+      "summary_zh": "全球首个人形机器人自主乒乓球完整对局亮相2026世界机器人大会；超维动力KAI全栈具身智能硬核登场",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "机器人",
+        "具身",
+        "全栈"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/475907.html",
+      "pub_date": "2026-08-19 10:12:09",
+      "created_at": "2026-08-20 03:59:16"
+    },
+    {
+      "title_zh": "IDC发布2026中国AI50强",
+      "summary_zh": "IDC发布2026中国AI50强：360以“智能体+安全”双轮驱动入选；凭借企业级智能体与AI安全的全栈布局，360成为中国人工智能产业发展的代表企业之一",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "中国",
+        "成为",
+        "发展"
+      ],
+      "importance_score": 6.6,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/475901.html",
+      "pub_date": "2026-08-19 08:34:36",
+      "created_at": "2026-08-20 03:59:16"
+    },
     {
       "title_zh": "为前沿模型提供零数据保留",
       "summary_zh": "为前沿模型提供零数据保留；OpenAI 重申对符合条件的 API 客户实行零数据保留，并预览私人安全处理，以在不损害数据隐私的情况下实现高级 AI 安全",
