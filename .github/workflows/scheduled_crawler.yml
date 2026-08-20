@@ -2,8 +2,8 @@ name: Daily Data Crawler
 
 on:
   schedule:
-    # 表达式基于 UTC 时间：以下代表每天 UTC 02:00（即北京时间 10:00）运行
-    - cron: '0 2 * * *'
+    # 基于 UTC 时间
+    - cron: '20 1 * * *'
   workflow_dispatch: # 保留手动触发按钮，方便随时测试
 
 # 必须赋予写权限，否则 Actions 无法将更新后的 data.json 推送回仓库
