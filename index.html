@@ -199,7 +199,7 @@
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-number" id="stat-news-count">0</div>
-        <div class="stat-label">今日情报条数</div>
+        <div class="stat-label">今日新增情报</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">8 家</div>
@@ -488,7 +488,8 @@
       document.documentElement.setAttribute('data-theme', savedTheme);
       updateThemeUI(savedTheme);
     }
-// 统一多维组合筛选函数（分类与搜索框取交集）
+
+    // 统一多维组合筛选函数（分类与搜索框取交集）
     function applyFilters() {
       const activeBtn = document.querySelector('#category-filters .filter-btn.active');
       const selectedCat = activeBtn ? activeBtn.dataset.cat : 'ALL';
@@ -509,29 +510,44 @@
       renderNews();
     }
 
-    function calculateTodayCount(newsList, lastUpdated) {
-      // 获取当前本地日期的 YYYY-MM-DD 格式
+    // 获取当前日期的 YYYY-MM-DD 格式字符串
+    function getTodayDateStr() {
       const now = new Date();
       const year = now.getFullYear();
       const month = String(now.getMonth() + 1).padStart(2, '0');
       const day = String(now.getDate()).padStart(2, '0');
-      const todayStr = `${year}-${month}-${day}`;
-
-      // 1. 如果新闻数据项包含 pub_date / date / created_at 字段，按条目日期筛选
-      const todayNews = newsList.filter(item => {
-        const itemDate = item.pub_date || item.date || item.created_at;
-        if (itemDate) {
-          return itemDate.includes(todayStr);
-        }
-      // 2. 若单条无日期字段，则对比整个 json 的最后更新时间 last_updated 是否为今天
-      return lastUpdated ? lastUpdated.includes(todayStr) : true;
-      });
-
-      return todayNews.length;
+      return `${year}-${month}-${day}`;
     }
-
-    // 1. 读取本地 data.json
+    
+    // 专门从 /history/YYYY-MM-DD.json 读取今日情报总数 totalcount
+    function fetchTodayTotalCount() {
+      const todayStr = getTodayDateStr();
+      const historyUrl = `./history/${todayStr}.json`;
+    
+      fetch(historyUrl)
+        .then(res => {
+          if (!res.ok) throw new Error(`未找到历史数据文件: ${historyUrl}`);
+          return res.json();
+        })
+        .then(data => {
+          // 优先读取 totalcount，兼容 totalCount
+          const count = data.total_count !== undefined ? data.total_count : (data.totalCount || 0);
+          document.getElementById('stat-news-count').innerText = `${count} 条`;
+        })
+        .catch(err => {
+          console.warn(`⚠️ ${err.message}，降级使用本地列表计算`);
+          // 读取历史文件失败时的容错降级：自动回退至原计算逻辑
+          const todayCount = calculateTodayCount(rawNews, '');
+          document.getElementById('stat-news-count').innerText = `${todayCount} 条`;
+        });
+    }
+    
+    // 修改原 loadData 函数
     function loadData() {
+      // 1. 读取 history JSON 中的今日统计数量
+      fetchTodayTotalCount();
+    
+      // 2. 读取主新闻列表
       fetch('./data.json')
         .then(res => {
           if (!res.ok) throw new Error("File not found");
@@ -540,21 +556,13 @@
         .then(data => {
           rawNews = data.news || [];
           const lastUpdated = data.last_updated || '';
-
-          // 计算并更新今日情报条数
-          const todayCount = calculateTodayCount(rawNews, lastUpdated);
-          document.getElementById('stat-news-count').innerText = `${todayCount} 条`;
+    
           document.getElementById('update-status').innerText = `最后更新: ${lastUpdated || '刚刚'}`;
-
           applyFilters();
         })
         .catch(err => {
           console.warn("⚠️ 读取 data.json 失败，改用 Fallback 模拟数据展示:", err);
           rawNews = fallbackData.news;
-
-          const todayCount = calculateTodayCount(rawNews, fallbackData.last_updated);
-          document.getElementById('stat-news-count').innerText = `${todayCount} 条`;
-
           applyFilters();
         });
     }
@@ -684,7 +692,8 @@
       renderLeaderboard(); // 重新渲染高亮行
       initRadarChart(vendorName); // 刷新雷达图对比
     }
-        // 5. 初始化 ECharts 雷达图 (Module 2)
+
+    // 5. 初始化 ECharts 雷达图 (Module 2)
     function initRadarChart(compareVendor = currentSelectedVendor) {
       const chartDom = document.getElementById('radar-chart');
       if (radarChartInstance) radarChartInstance.dispose();
@@ -756,60 +765,60 @@
 
     let modelLeaderboardPage = 1;
     let modelPricingPage = 1;
-    const modelItemsPerPage = 6
+    const modelItemsPerPage = 6;
 
     // 6. 渲染 Module 3: 大模型智能排行榜 & 价格矩阵
     function renderModelBenchmark(typeFilter = 'ALL') {
-  // --- 1. 渲染智能排行榜 ---
-  const leaderboardBody = document.getElementById('model-leaderboard-body');
-  const lbTotalPages = Math.ceil(modelBenchmarkData.length / modelItemsPerPage);
-  if (modelLeaderboardPage > lbTotalPages) modelLeaderboardPage = lbTotalPages;
-  if (modelLeaderboardPage < 1) modelLeaderboardPage = 1;
+      // --- 1. 渲染智能排行榜 ---
+      const leaderboardBody = document.getElementById('model-leaderboard-body');
+      const lbTotalPages = Math.ceil(modelBenchmarkData.length / modelItemsPerPage);
+      if (modelLeaderboardPage > lbTotalPages) modelLeaderboardPage = lbTotalPages;
+      if (modelLeaderboardPage < 1) modelLeaderboardPage = 1;
 
-  const lbStart = (modelLeaderboardPage - 1) * modelItemsPerPage;
-  const lbPaginated = modelBenchmarkData.slice(lbStart, lbStart + modelItemsPerPage);
+      const lbStart = (modelLeaderboardPage - 1) * modelItemsPerPage;
+      const lbPaginated = modelBenchmarkData.slice(lbStart, lbStart + modelItemsPerPage);
 
-  leaderboardBody.innerHTML = lbPaginated.map(m => `
-    <tr>
-      <td style="font-weight:bold; color:var(--accent-purple);">#${m.rank}</td>
-      <td style="font-weight:600; color:var(--text-main);">${m.name}</td>
-      <td style="color:var(--text-muted);">${m.vendor}</td>
-      <td style="color:var(--accent-green); font-weight:bold;">${m.elo}</td>
-      <td style="color:var(--accent-blue); font-weight:600;">${m.codeScore}</td>
-      <td>${m.isOpen ? '<span class="tag-open">开源可商用</span>' : '<span class="tag-closed">闭源 API</span>'}</td>
-    </tr>
-  `).join('');
+      leaderboardBody.innerHTML = lbPaginated.map(m => `
+        <tr>
+          <td style="font-weight:bold; color:var(--accent-purple);">#${m.rank}</td>
+          <td style="font-weight:600; color:var(--text-main);">${m.name}</td>
+          <td style="color:var(--text-muted);">${m.vendor}</td>
+          <td style="color:var(--accent-green); font-weight:bold;">${m.elo}</td>
+          <td style="color:var(--accent-blue); font-weight:600;">${m.codeScore}</td>
+          <td>${m.isOpen ? '<span class="tag-open">开源可商用</span>' : '<span class="tag-closed">闭源 API</span>'}</td>
+        </tr>
+      `).join('');
 
-  renderModelPagination('model-leaderboard-pagination', lbTotalPages, modelLeaderboardPage, 'changeModelLeaderboardPage');
+      renderModelPagination('model-leaderboard-pagination', lbTotalPages, modelLeaderboardPage, 'changeModelLeaderboardPage');
 
-  // --- 2. 渲染对标矩阵 ---
-  const filtered = typeFilter === 'ALL'
-    ? modelBenchmarkData
-    : modelBenchmarkData.filter(m => m.category === typeFilter);
+      // --- 2. 渲染对标矩阵 ---
+      const filtered = typeFilter === 'ALL'
+        ? modelBenchmarkData
+        : modelBenchmarkData.filter(m => m.category === typeFilter);
 
-  const pricingBody = document.getElementById('model-pricing-body');
-  const prTotalPages = Math.ceil(filtered.length / modelItemsPerPage);
-  if (modelPricingPage > prTotalPages) modelPricingPage = prTotalPages;
-  if (modelPricingPage < 1) modelPricingPage = 1;
+      const pricingBody = document.getElementById('model-pricing-body');
+      const prTotalPages = Math.ceil(filtered.length / modelItemsPerPage);
+      if (modelPricingPage > prTotalPages) modelPricingPage = prTotalPages;
+      if (modelPricingPage < 1) modelPricingPage = 1;
 
-  const prStart = (modelPricingPage - 1) * modelItemsPerPage;
-  const prPaginated = filtered.slice(prStart, prStart + modelItemsPerPage);
+      const prStart = (modelPricingPage - 1) * modelItemsPerPage;
+      const prPaginated = filtered.slice(prStart, prStart + modelItemsPerPage);
 
-  pricingBody.innerHTML = prPaginated.map(m => `
-    <tr>
-      <td style="font-weight:600; color:var(--text-main);">${m.name}</td>
-      <td style="color:var(--text-muted);">${m.vendor}</td>
-      <td><span style="background:var(--input-bg); border:1px solid var(--border-color); padding:2px 8px; border-radius:4px; font-size:0.8rem; color:var(--text-main);">${m.context}</span></td>
-      <td style="color:var(--accent-green); font-weight:600;">${m.inputPrice}</td>
-      <td style="color:var(--accent-yellow); font-weight:600;">${m.outputPrice}</td>
-      <td style="color:var(--text-muted); font-size:0.8rem;">${m.cacheDiscount}</td>
-      <td>${m.isOpen ? `<span class="tag-open">${m.licenseType}</span>` : `<span class="tag-closed">${m.licenseType}</span>`}</td>
-      <td style="color:var(--text-muted); font-size:0.8rem;">${m.enterpriseFeatures}</td>
-    </tr>
-  `).join('');
+      pricingBody.innerHTML = prPaginated.map(m => `
+        <tr>
+          <td style="font-weight:600; color:var(--text-main);">${m.name}</td>
+          <td style="color:var(--text-muted);">${m.vendor}</td>
+          <td><span style="background:var(--input-bg); border:1px solid var(--border-color); padding:2px 8px; border-radius:4px; font-size:0.8rem; color:var(--text-main);">${m.context}</span></td>
+          <td style="color:var(--accent-green); font-weight:600;">${m.inputPrice}</td>
+          <td style="color:var(--accent-yellow); font-weight:600;">${m.outputPrice}</td>
+          <td style="color:var(--text-muted); font-size:0.8rem;">${m.cacheDiscount}</td>
+          <td>${m.isOpen ? `<span class="tag-open">${m.licenseType}</span>` : `<span class="tag-closed">${m.licenseType}</span>`}</td>
+          <td style="color:var(--text-muted); font-size:0.8rem;">${m.enterpriseFeatures}</td>
+        </tr>
+      `).join('');
 
-  renderModelPagination('model-pricing-pagination', prTotalPages, modelPricingPage, 'changeModelPricingPage');
-}
+      renderModelPagination('model-pricing-pagination', prTotalPages, modelPricingPage, 'changeModelPricingPage');
+    }
 
     // 通用 Module 3 分页条渲染器
     function renderModelPagination(containerId, totalPages, currentPage, callbackName) {
@@ -856,6 +865,7 @@
       { name: "Yi-Large", vendor: "零一万物 (闭源)", value: [0.80, 1230] },
       { name: "腾讯混元 Pro", vendor: "腾讯 (闭源)", value: [0.50, 1228] }
     ];
+
     // 7. 初始化 Module 3 散点图
     function initModelScatterChart() {
       const chartDom = document.getElementById('model-scatter-chart');
@@ -943,16 +953,6 @@
     });
 
     // Module 3 筛选按钮
-    document.getElementById('model-type-filters').addEventListener('click', (e) => {
-      if (!e.target.classList.contains('filter-btn')) return;
-      document.querySelectorAll('#model-type-filters .filter-btn').forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-
-      const type = e.target.dataset.type;
-      renderModelBenchmark(type);
-    });
-
-    // Module 3 按钮筛选响应，重置至第一页
     document.getElementById('model-type-filters').addEventListener('click', (e) => {
       if (!e.target.classList.contains('filter-btn')) return;
       document.querySelectorAll('#model-type-filters .filter-btn').forEach(b => b.classList.remove('active'));
