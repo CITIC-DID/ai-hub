@@ -3,6 +3,7 @@ import os
 import json
 import time
 from datetime import datetime
+from datetime import timedelta
 import feedparser
 from openai import OpenAI
 import re
@@ -13,7 +14,7 @@ from deep_translator import GoogleTranslator
 from playwright.sync_api import sync_playwright
 
 # ==================== 配置区 ====================
-DEEPSEEK_API_KEY = os.getenv("DEEK_SEEK_API_KEY")
+DEEPSEEK_API_KEY = os.getenv("DEEK_SEEK_API_KEY", "sk-074b2023166045b4b945a7a142f8c922")
 
 # RSS 订阅源配置列表
 RSS_SOURCES = [
@@ -50,6 +51,8 @@ RSS_SOURCES = [
 
 DATA_FILE = "data.json"
 HISTORY_DIR = "history"
+
+TIME_NOISE_REGEX = r'^(刚刚|\d+\s*(秒|分钟|小时|天)前|热门|精选|快讯|置顶)$'
 # ================================================
 
 
@@ -59,6 +62,59 @@ def get_openai_client():
         api_key=DEEPSEEK_API_KEY,
         base_url="https://api.deepseek.com"
     )
+
+def _clean_html(raw_html: str) -> str:
+    """去除 HTML 标签及实体符号，保留纯文本"""
+    if not raw_html:
+        return ""
+    text = re.sub(r'<[^>]+>', '', raw_html)
+    text = re.sub(r'&[a-zA-Z]+;', ' ', text)
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
+
+def _is_today_or_yesterday(pub_dt):
+    """校验时间是否为今天或昨天（昨天 00:00:00 之后）"""
+    if not pub_dt:
+        return True
+    now = datetime.now()
+    yesterday_start = (now - timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
+    return pub_dt >= yesterday_start
+
+
+def _parse_relative_time(time_str):
+    """将网页相对时间（如：刚刚、10分钟前、昨天 14:20）解析为 datetime 对象"""
+    now = datetime.now()
+    time_str = time_str.strip()
+
+    if "刚刚" in time_str:
+        return now
+
+    match_min = re.search(r"(\d+)\s*分钟前", time_str)
+    if match_min:
+        return now - timedelta(minutes=int(match_min.group(1)))
+
+    match_hour = re.search(r"(\d+)\s*小时前", time_str)
+    if match_hour:
+        return now - timedelta(hours=int(match_hour.group(1)))
+
+    if "昨天" in time_str:
+        yesterday = now - timedelta(days=1)
+        time_match = re.search(r"(\d{1,2}):(\d{2})", time_str)
+        if time_match:
+            return yesterday.replace(hour=int(time_match.group(1)), minute=int(time_match.group(2)), second=0)
+        return yesterday
+
+    match_date = re.search(r"(\d{4}-)?(\d{2})-(\d{2})", time_str)
+    if match_date:
+        year = int(match_date.group(1).rstrip('-')) if match_date.group(1) else now.year
+        month = int(match_date.group(2))
+        day = int(match_date.group(3))
+        try:
+            return datetime(year, month, day)
+        except ValueError:
+            pass
+
+    return now
 
 
 def load_existing_urls(data_file):
@@ -75,9 +131,10 @@ def load_existing_urls(data_file):
 
 
 def fetch_rss_items(existing_urls, max_per_feed=3):
-    """抓取 RSS 源并进行初步去重"""
+    """抓取 RSS 源并提取标准化数据（仅保留今天/昨天的未重复资讯）"""
     new_items = []
-    
+    seen_urls = set(existing_urls)
+
     for source in RSS_SOURCES:
         print(f"📡 正在抓取订阅源: {source['source_name']}...")
         try:
@@ -86,78 +143,106 @@ def fetch_rss_items(existing_urls, max_per_feed=3):
             for entry in feed.entries:
                 if count >= max_per_feed:
                     break
-                
+
                 link = entry.get('link', '')
-                if not link or link in existing_urls:
-                    continue  # 跳过已有文章
-                
-                title = entry.get('title', '')
-                summary = entry.get('summary', entry.get('description', ''))
-                pub_time = entry.get('published', datetime.now().strftime("%Y-%m-%d %H:%M"))
-                
+                if not link or link in seen_urls:
+                    continue
+
+                # 解析 RSS 发布时间
+                pub_dt = datetime.now()
+                if hasattr(entry, 'published_parsed') and entry.published_parsed:
+                    pub_dt = datetime(*entry.published_parsed[:6])
+
+                # 过滤掉早于昨天的旧资讯
+                if not _is_today_or_yesterday(pub_dt):
+                    continue
+
+                title = _clean_html(entry.get('title', ''))
+                raw_summary = entry.get('summary', entry.get('description', ''))
+                summary = _clean_html(raw_summary)
+
                 new_items.append({
                     "source_name": source['source_name'],
                     "region": source['region'],
                     "raw_title": title,
-                    "raw_summary": summary[:1000],  # 截断避免 Token 过长
+                    "raw_summary": summary[:1000],
                     "url": link,
-                    "pub_time": pub_time
+                    "pub_time": pub_dt.strftime("%Y-%m-%d %H:%M:%S")
                 })
+                seen_urls.add(link)
                 count += 1
         except Exception as e:
             print(f"❌ 抓取失败 {source['source_name']}: {e}")
-            
+
     return new_items
 
-def fetch_aibase_news():
-    """使用 Playwright 渲染页面并提取数据"""
+
+def fetch_aibase_news(existing_urls):
+    """使用 Playwright 抓取 AIBase（查重 + 仅限今天/昨天的资讯）"""
     url = "https://www.aibase.com/zh/news"
     raw_items = []
-    
+    seen_urls = set(existing_urls)
+
     with sync_playwright() as p:
-        # 启动无头 Chrome，设置真实浏览器特征
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
             viewport={'width': 1280, 'height': 800}
         )
         page = context.new_page()
-        
+
         try:
-            # 访问页面并等待 DOM 内容加载完成
             page.goto(url, wait_until="domcontentloaded", timeout=20000)
-            page.wait_for_timeout(3000) # 等待异步数据加载完成
-            
-            # 抓取新闻链接元素
+            page.wait_for_timeout(3000)
+
             links = page.locator("a[href*='/zh/news/']").all()
-            seen_urls = set()
-            
+
             for link in links:
-                title = link.inner_text().strip()
+                raw_text = link.inner_text().strip()
                 href = link.get_attribute("href") or ""
-                
-                if not title or len(title) < 6:
+
+                if not raw_text:
                     continue
-                    
+
                 full_url = href if href.startswith("http") else f"https://www.aibase.com{href}"
-                
-                if full_url not in seen_urls:
-                    seen_urls.add(full_url)
-                    raw_items.append({
-                        "source_name": "AIBase",
-                        "raw_title": title.split('\n')[0], # 清理多余换行
-                        "raw_summary": title.replace('\n', ' '),
-                        "region": "国内",
-                        "url": full_url
-                    })
-                    
+                if full_url in seen_urls:
+                    continue
+
+                text_lines = [line.strip() for line in raw_text.split('\n') if line.strip()]
+
+                # 提取相对时间文本并计算出真实的 pub_dt
+                time_line = next((l for l in text_lines if re.match(TIME_NOISE_REGEX, l)), "")
+                pub_dt = _parse_relative_time(time_line) if time_line else datetime.now()
+
+                # 判定是否属于今天或昨天
+                if not _is_today_or_yesterday(pub_dt):
+                    continue
+
+                valid_lines = [l for l in text_lines if not re.match(TIME_NOISE_REGEX, l)]
+                if not valid_lines:
+                    continue
+
+                real_title = valid_lines[0]
+                if len(real_title) < 5:
+                    continue
+
+                seen_urls.add(full_url)
+                raw_items.append({
+                    "source_name": "AIBase",
+                    "raw_title": real_title,
+                    "raw_summary": " ".join(valid_lines),
+                    "region": "国内",
+                    "url": full_url,
+                    "pub_time": pub_dt.strftime("%Y-%m-%d %H:%M:%S")
+                })
+
             print(f"✅ [Playwright] 成功抓取 AIBase 资讯 {len(raw_items)} 条。")
-            
+
         except Exception as e:
             print(f"❌ [Playwright] 抓取失败: {e}")
         finally:
             browser.close()
-            
+
     return raw_items
 
 def process_with_deepseek(client, raw_item: dict) -> dict:
