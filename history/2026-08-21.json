@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-08-21 01:19:12",
-  "total_count": 105,
+  "last_updated": "2026-08-21 10:56:57",
+  "total_count": 108,
   "news": [
+    {
+      "title_zh": "这届“WRC必看”",
+      "summary_zh": "这届“WRC必看”：全栈AI、20+超难家务，8.99万带回家；这届“WRC必看”：全栈AI、20+超难家务，8.99万带回家",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "家务",
+        "超难",
+        "带回家"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/476280.html",
+      "pub_date": "2026-08-20 10:17:47",
+      "created_at": "2026-08-21 10:56:57"
+    },
+    {
+      "title_zh": "光帆AI技术正式落地韶音OpenFit 2 AI耳机",
+      "summary_zh": "光帆AI技术正式落地韶音OpenFit 2 AI耳机，携手突破AI边界；韶音宣布与光帆科技达成AI技术合作，将上线基于光帆自研AI OS的效率功能合集——\"AI 实验室\"",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "技术",
+        "合作",
+        "达成"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/476281.html",
+      "pub_date": "2026-08-20 10:13:45",
+      "created_at": "2026-08-21 10:56:57"
+    },
+    {
+      "title_zh": "闭源RSI的严父",
+      "summary_zh": "闭源RSI的严父：18个Agent自主科研，Kimi K3靠Harness逼近Opus 5；经典RSI剧本开始动摇",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "经典",
+        "自主",
+        "开始"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/476199.html",
+      "pub_date": "2026-08-20 09:46:23",
+      "created_at": "2026-08-21 10:56:57"
+    },
     {
       "title_zh": "Introducing AI Futures",
       "summary_zh": "Introducing AI Futures；隆重推出 AI Futures，这是一个新的 OpenAI 博客，探讨变革性人工智能如何重塑权力、治理、经济和个人自由",
