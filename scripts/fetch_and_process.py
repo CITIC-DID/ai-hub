@@ -14,7 +14,7 @@ from deep_translator import GoogleTranslator
 from playwright.sync_api import sync_playwright
 
 # ==================== 配置区 ====================
-DEEPSEEK_API_KEY = os.getenv("DEEK_SEEK_API_KEY", "sk-074b2023166045b4b945a7a142f8c922")
+DEEPSEEK_API_KEY = os.getenv("DEEK_SEEK_API_KEY")
 
 # RSS 订阅源配置列表
 RSS_SOURCES = [
