@@ -320,12 +320,10 @@ def process_with_deepseek(client, raw_item: dict) -> dict:
         }
 
 def save_data(new_processed_news):
-    """保存更新后的数据至主文件及历史归档目录"""
     if not new_processed_news:
         print("ℹ️ 没有新资讯需要保存。")
         return
 
-    # 1. 读取历史数据
     existing_data = {"last_updated": "", "news": []}
     if os.path.exists(DATA_FILE):
         try:
@@ -334,10 +332,9 @@ def save_data(new_processed_news):
         except Exception:
             pass
 
-    # 2. 合并并更新主 JSON
     updated_news = new_processed_news + existing_data.get("news", [])
-    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
+    current_time = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
+
     final_payload = {
         "last_updated": current_time,
         "total_count": len(updated_news),
@@ -348,15 +345,26 @@ def save_data(new_processed_news):
         json.dump(final_payload, f, ensure_ascii=False, indent=2)
     print(f"✅ 已成功更新 {DATA_FILE}，当前总计 {len(updated_news)} 条数据。")
 
-    # 3. 按日备份快照至 history/ 目录
+    today_existing_data = {"last_updated": "", "news": []}
     if not os.path.exists(HISTORY_DIR):
         os.makedirs(HISTORY_DIR)
-        
-    date_str = datetime.now().strftime("%Y-%m-%d")
+    date_str = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
     history_file = os.path.join(HISTORY_DIR, f"{date_str}.json")
-    
+    if os.path.exists(history_file):
+        try:
+            with open(history_file, 'r', encoding='utf-8') as f:
+                today_existing_data = json.load(f)
+        except Exception:
+            pass
+            
+    today_updated_news = new_processed_news + today_existing_data.get("news", [])
+    today_payload = {
+        "last_updated": current_time,
+        "total_count": len(today_updated_news),
+        "news": today_updated_news
+    }
     with open(history_file, 'w', encoding='utf-8') as f:
-        json.dump(final_payload, f, ensure_ascii=False, indent=2)
+        json.dump(today_payload, f, ensure_ascii=False, indent=2)
     print(f"📁 已备份历史快照至 {history_file}")
 
 
