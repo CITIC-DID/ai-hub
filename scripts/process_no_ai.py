@@ -428,7 +428,7 @@ def save_data(new_processed_news):
             pass
 
     updated_news = new_processed_news + existing_data.get("news", [])
-    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    current_time = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
 
     final_payload = {
         "last_updated": current_time,
@@ -443,7 +443,7 @@ def save_data(new_processed_news):
     if not os.path.exists(HISTORY_DIR):
         os.makedirs(HISTORY_DIR)
 
-    date_str = datetime.now().strftime("%Y-%m-%d")
+    date_str = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
     history_file = os.path.join(HISTORY_DIR, f"{date_str}.json")
 
     with open(history_file, 'w', encoding='utf-8') as f:
