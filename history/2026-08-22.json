@@ -1,0 +1,82 @@
+{
+  "last_updated": "2026-08-22 07:00:56",
+  "total_count": 4,
+  "news": [
+    {
+      "title_zh": "Error 500 !!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_zh": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s ...",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "Error",
+        "error",
+        "500"
+      ],
+      "importance_score": 6.0,
+      "source": "Google DeepMind",
+      "region": "全球",
+      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+      "pub_date": "2026-08-21 11:59:48",
+      "created_at": "2026-08-22 07:00:56"
+    },
+    {
+      "title_zh": "最大运力自动驾驶轻卡落地，来自无人车巨头",
+      "summary_zh": "最大运力自动驾驶轻卡落地，来自无人车巨头；载重4.2吨、容积19.32m³",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "落地",
+        "驾驶",
+        "来自"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/476778.html",
+      "pub_date": "2026-08-21 11:47:27",
+      "created_at": "2026-08-22 07:00:56"
+    },
+    {
+      "title_zh": "明略科技携手海康机器人亮相世界机器人大会",
+      "summary_zh": "明略科技携手海康机器人亮相世界机器人大会，以“Agent+具身”联合进入商业机器人场景；明略科技（2718.HK）与海康机器人联合参展2026WRC，聚焦商业服务领域展示具身智能落地进展",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "机器人",
+        "商业",
+        "具身"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/476733.html",
+      "pub_date": "2026-08-21 09:44:33",
+      "created_at": "2026-08-22 07:00:56"
+    },
+    {
+      "title_zh": "雷鸟iO发布：两天续航、全天候主动式AI，轻至34g",
+      "summary_zh": "雷鸟iO发布：两天续航、全天候主动式AI，轻至34g；8月21日，全球领先的消费级AR品牌雷鸟创新（RayNeo）举办2026雷鸟AI眼镜新品发布会",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "消费",
+        "眼镜",
+        "创新"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/476628.html",
+      "pub_date": "2026-08-21 09:00:06",
+      "created_at": "2026-08-22 07:00:56"
+    }
+  ]
+}
