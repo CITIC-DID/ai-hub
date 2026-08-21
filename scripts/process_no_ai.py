@@ -442,12 +442,23 @@ def save_data(new_processed_news):
 
     if not os.path.exists(HISTORY_DIR):
         os.makedirs(HISTORY_DIR)
-
     date_str = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
     history_file = os.path.join(HISTORY_DIR, f"{date_str}.json")
-
+    if os.path.exists(history_file):
+        try:
+            with open(history_file, 'r', encoding='utf-8') as f:
+                today_existing_data = json.load(f)
+        except Exception:
+            pass
+            
+    today_updated_news = new_processed_news + today_existing_data.get("news", [])
+    today_payload = {
+        "last_updated": current_time,
+        "total_count": len(today_updated_news),
+        "news": today_updated_news
+    }
     with open(history_file, 'w', encoding='utf-8') as f:
-        json.dump(final_payload, f, ensure_ascii=False, indent=2)
+        json.dump(today_payload, f, ensure_ascii=False, indent=2)
     print(f"📁 已备份历史快照至 {history_file}")
 
 
