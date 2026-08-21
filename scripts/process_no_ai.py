@@ -440,6 +440,7 @@ def save_data(new_processed_news):
         json.dump(final_payload, f, ensure_ascii=False, indent=2)
     print(f"✅ 已成功更新 {DATA_FILE}，当前总计 {len(updated_news)} 条数据。")
 
+    today_existing_data = {"last_updated": "", "news": []}
     if not os.path.exists(HISTORY_DIR):
         os.makedirs(HISTORY_DIR)
     date_str = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
