@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-08-23 06:58:12",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "不是Demo！优必选把客户产线1",
+      "summary_zh": "优必选把客户产线1:1搬进WRC，解锁具身智能真落地路径；端侧部署解决了具身大脑能否装进身体的问题",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "商用",
+        "大脑",
+        "具身"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/477253.html",
+      "pub_date": "2026-08-22 14:46:43",
+      "created_at": "2026-08-23 06:58:12"
+    },
+    {
+      "title_zh": "伽利略机器人首发“陆行具身系统”，打通轮车足底层技术壁垒",
+      "summary_zh": "伽利略机器人首发“陆行具身系统”，打通轮车足底层技术壁垒",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "打通",
+        "具身",
+        "系统"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/477246.html",
+      "pub_date": "2026-08-22 14:19:39",
+      "created_at": "2026-08-23 06:58:12"
+    },
+    {
+      "title_zh": "魔法原子亮相WRC 2026",
+      "summary_zh": "魔法原子亮相WRC 2026，三大场景解决方案实景展示物理AI真·上岗；一脑驱动多形落地",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "物理",
+        "解决方案",
+        "展示"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/477155.html",
+      "pub_date": "2026-08-22 14:11:20",
+      "created_at": "2026-08-23 06:58:12"
+    }
+  ]
+}
