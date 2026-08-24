@@ -550,7 +550,7 @@
           return res.json();
         })
         .then(data => {
-          const count = data.totalcount !== undefined ? data.totalcount : (data.totalCount || 0);
+          const count = data.total_count !== undefined ? data.total_count : (data.total_Count || 0);
           document.getElementById('stat-news-count').innerText = `${count} 条`;
         })
         .catch(err => {
