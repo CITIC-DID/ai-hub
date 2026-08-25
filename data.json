@@ -2,25 +2,7 @@
   "last_updated": "2026-08-25 07:03:00",
   "total_count": 125,
   "news": [
-    {
-      "title_zh": "Error 500 !!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_zh": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s ...",
-      "category": {
-        "l1": "行业",
-        "l2": "原厂"
-      },
-      "tags": [
-        "Error",
-        "error",
-        "500"
-      ],
-      "importance_score": 7.5,
-      "source": "OpenAI Blog",
-      "region": "北美洲",
-      "url": "https://openai.com/index/gpt-5-6-in-kiro",
-      "pub_date": "2026-08-24 12:00:00",
-      "created_at": "2026-08-25 07:03:00"
-    },
+    
     {
       "title_zh": "AI重塑商业",
       "summary_zh": "AI重塑商业，信任决定未来商业能走多远丨Visa大中华区总裁张文翊；Visa看到的AI未来",
