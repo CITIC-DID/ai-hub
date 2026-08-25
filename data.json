@@ -1,8 +1,121 @@
 {
-  "last_updated": "2026-08-25 07:03:00",
-  "total_count": 125,
+  "last_updated": "2026-08-26 07:05:20",
+  "total_count": 130,
   "news": [
-    
+    {
+      "title_zh": "Error 500 !!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_zh": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s ...",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "Error",
+        "error",
+        "500"
+      ],
+      "importance_score": 7.5,
+      "source": "OpenAI Blog",
+      "region": "北美洲",
+      "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence",
+      "pub_date": "2026-08-25 07:05:00",
+      "created_at": "2026-08-26 07:05:19"
+    },
+    {
+      "title_zh": "Error 500 !!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_zh": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s ...",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "Error",
+        "error",
+        "500"
+      ],
+      "importance_score": 7.5,
+      "source": "OpenAI Blog",
+      "region": "北美洲",
+      "url": "https://openai.com/index/jalapeno-first-results",
+      "pub_date": "2026-08-25 07:00:00",
+      "created_at": "2026-08-26 07:05:20"
+    },
+    {
+      "title_zh": "Error 500 !!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_zh": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s ...",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "Error",
+        "error",
+        "500"
+      ],
+      "importance_score": 7.5,
+      "source": "OpenAI Blog",
+      "region": "北美洲",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
+      "pub_date": "2026-08-25 00:00:00",
+      "created_at": "2026-08-26 07:05:20"
+    },
+    {
+      "title_zh": "从开源走向共建",
+      "summary_zh": "从开源走向共建：范式联合优必选等十余家具身巨头发布PhanthyMotus新计划；近日，范式正式举办 PhanthyMotus 生态社区共建计划发布会，宣布其首个通用具身Agent底座从“开源”...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "共建",
+        "计划",
+        "范式"
+      ],
+      "importance_score": 6.6,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/479314.html",
+      "pub_date": "2026-08-25 09:31:16",
+      "created_at": "2026-08-26 07:05:20"
+    },
+    {
+      "title_zh": "开源国产8B模型，比肩闭源Image 2了！",
+      "summary_zh": "开源国产8B模型，比肩闭源Image 2了；SenseNova U1.5 Lite",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "模型",
+        "开源",
+        "国产"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/479192.html",
+      "pub_date": "2026-08-25 06:53:26",
+      "created_at": "2026-08-26 07:05:20"
+    },
+    {
+      "title_zh": "半年3轮10亿",
+      "summary_zh": "半年3轮10亿，他们都投了这家已经把机器人卖到500个家庭的公司；字节、汇川等已入股未来不远机器人最新一轮融资",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "机器人",
+        "家庭",
+        "汇川"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/479132.html",
+      "pub_date": "2026-08-25 06:39:51",
+      "created_at": "2026-08-26 07:05:20"
+    },
     {
       "title_zh": "AI重塑商业",
       "summary_zh": "AI重塑商业，信任决定未来商业能走多远丨Visa大中华区总裁张文翊；Visa看到的AI未来",
