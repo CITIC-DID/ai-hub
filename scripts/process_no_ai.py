@@ -66,9 +66,12 @@ DISCOURSE_MARKERS = [
 ]
 
 CATEGORY_L1_RULES = {
-    "政策": ["政策", "法案", "标准", "评估", "规范", "安全", "治理", "监管", "合规", "指南", "框架", "法规", "policy", "governance"],
-    "技术趋势": ["算法", "架构", "推理", "agent", "基准", "评测", "多模态", "突破", "论文", "模型", "芯片", "算力", "微调", "llm"],
-    "厂商": ["openai", "google", "微软", "百度", "阿里", "腾讯", "发布", "更新", "推出", "融资", "上线", "收购", "字节", "华为"]
+    "政策": ["政策", "法案", "标准", "评估", "规范", "安全", "治理", "监管", "合规", "指南", "框架", "法规", "policy",
+             "governance"],
+    "技术趋势": ["算法", "架构", "推理", "agent", "基准", "评测", "多模态", "突破", "论文", "模型", "芯片", "算力",
+                 "微调", "llm"],
+    "厂商": ["openai", "google", "微软", "百度", "阿里", "腾讯", "发布", "更新", "推出", "融资", "上线", "收购", "字节",
+             "华为"]
 }
 
 CATEGORY_L2_RULES = {
@@ -77,9 +80,21 @@ CATEGORY_L2_RULES = {
     "聚合": ["聚合", "路由", "中转", "gateway", "网关", "openrouter", "portkey", "litellm", "api"]
 }
 
-HIGH_IMPACT_WORDS = ["发布", "突破", "重磅", "安全", "标准", "首个", "开源", "更新", "上线", "推出", "launch", "release"]
+HIGH_IMPACT_WORDS = ["发布", "突破", "重磅", "安全", "标准", "首个", "开源", "更新", "上线", "推出", "launch",
+                     "release"]
 TOP_SOURCES = ["OpenAI Blog", "Google Cloud", "36氪", "TechCrunch", "通信产业网", "IT之家", "机器之心", "AIBase"]
 
+SYSTEM_ERROR_PATTERNS = [
+    r'500\s*Internal\s*Server\s*Error',
+    r'502\s*Bad\s*Gateway',
+    r'503\s*Service\s*Unavailable',
+    r'504\s*Gateway\s*Time-out',
+    r'403\s*Forbidden',
+    r'Error\s*50\d',
+    r'An error occurred',
+    r'Cloudflare',
+    r'Internal Server Error'
+]
 # ==================== 辅助工具函数 ====================
 
 def _clean_html(raw_html: str) -> str:
@@ -93,12 +108,20 @@ def _clean_html(raw_html: str) -> str:
 
 
 def _auto_translate_to_zh(text: str) -> str:
-    """检测英文并翻译为中文"""
+    """检测英文并翻译为中文 (已优化防 500 报错)"""
     if not text:
         return ""
+
+    # 提前拦截源站抓取来的报错文本
+    if any(re.search(p, text, flags=re.IGNORECASE) for p in SYSTEM_ERROR_PATTERNS):
+        return ""
+
     if len(re.findall(r'[a-zA-Z]{3,}', text)) > 2:
         try:
             translated = GoogleTranslator(source='auto', target='zh-CN').translate(text)
+            # 防止翻译接口自身返回 500 error 字符串
+            if translated and any(re.search(p, translated, flags=re.IGNORECASE) for p in SYSTEM_ERROR_PATTERNS):
+                return ""
             return translated if translated else text
         except Exception:
             return text
@@ -110,6 +133,7 @@ def _clean_sentence(text: str) -> str:
     for pattern in DISCOURSE_MARKERS:
         text = re.sub(pattern, '', text, flags=re.IGNORECASE).strip()
     return text
+
 
 # ==================== 数据抓取模块 ====================
 def _is_today_or_yesterday(pub_dt):
@@ -284,6 +308,8 @@ def fetch_aibase_news(existing_urls):
             browser.close()
 
     return raw_items
+
+
 # ==================== NLP 高精提炼模块 ====================
 
 def process_without_ai(raw_item: dict) -> dict:
@@ -318,6 +344,10 @@ def process_without_ai(raw_item: dict) -> dict:
     valid_sentences = []
 
     for s in sentences_raw:
+        # 新增：过滤掉含有 500 error 等系统级报错的句子
+        if any(re.search(p, s, flags=re.IGNORECASE) for p in SYSTEM_ERROR_PATTERNS):
+            continue
+
         if not re.search(r'(点击|关注|来源|图片|未经授权|责任编辑|微信|公众号|版权所有)', s):
             clean_s = _clean_sentence(s)
             if clean_s and not re.match(TIME_NOISE_REGEX, clean_s):
@@ -408,10 +438,17 @@ def process_without_ai(raw_item: dict) -> dict:
         "created_at": datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
     }
 
+
 # ==================== 数据持久化与主流程 ====================
 
 def process_data(raw_items_list):
-    return [process_without_ai(item) for item in raw_items_list]
+    processed = []
+    for item in raw_items_list:
+        p_item = process_without_ai(item)
+        # 如果标题为空或者被清空（比如全是报错信息），则丢弃该条资讯
+        if p_item["title_zh"].strip() and p_item["summary_zh"].strip():
+            processed.append(p_item)
+    return processed
 
 
 def save_data(new_processed_news):
@@ -451,7 +488,7 @@ def save_data(new_processed_news):
                 today_existing_data = json.load(f)
         except Exception:
             pass
-            
+
     today_updated_news = new_processed_news + today_existing_data.get("news", [])
     today_payload = {
         "last_updated": current_time,
