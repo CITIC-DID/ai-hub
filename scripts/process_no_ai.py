@@ -14,16 +14,16 @@ from playwright.sync_api import sync_playwright
 
 # ==================== 配置区 ====================
 RSS_SOURCES = [
-    {
-        "source_name": "OpenAI Blog",
-        "url": "https://openai.com/news/rss.xml",
-        "region": "北美洲"
-    },
-    {
-        "source_name": "Google DeepMind",
-        "url": "https://deepmind.google/blog/rss.xml",
-        "region": "全球"
-    },
+    # {
+    #     "source_name": "OpenAI Blog",
+    #     "url": "https://openai.com/news/rss.xml",
+    #     "region": "北美洲"
+    # },
+    # {
+    #     "source_name": "Google DeepMind",
+    #     "url": "https://deepmind.google/blog/rss.xml",
+    #     "region": "全球"
+    # },
 
     # --- AI 平台聚合商与 API 网关基础设施 ---
     {
