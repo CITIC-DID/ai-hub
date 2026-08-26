@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-08-26 14:51:47",
-  "total_count": 5,
+  "last_updated": "2026-08-26 15:06:13",
+  "total_count": 8,
   "news": [
+    {
+      "title_zh": "Top级的视频AI免费了！我反手做了个精致版《牛来》",
+      "summary_zh": "刚刚，Top级的视频AI免费了；Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try aga...",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "免费",
+        "视频",
+        "反手"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/479670.html",
+      "pub_date": "2026-08-26 05:56:25",
+      "created_at": "2026-08-26 15:06:13"
+    },
+    {
+      "title_zh": "WRC乒乓球局爆火！这家中国具身创业公司",
+      "summary_zh": "WRC乒乓球局爆火；这家中国具身创业公司，砸出了一套全栈新解法",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "球技",
+        "具身",
+        "丝滑"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/478860.html",
+      "pub_date": "2026-08-26 03:02:34",
+      "created_at": "2026-08-26 15:06:13"
+    },
+    {
+      "title_zh": "深度实测「豆包工作」+飞书",
+      "summary_zh": "深度实测「豆包工作」+飞书：目前最接近企业Agent终局的答案；Error 500 (Server Error)!!1500.That’s an error.There was an error...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "豆包",
+        "工作",
+        "终局"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/479348.html",
+      "pub_date": "2026-08-26 02:59:02",
+      "created_at": "2026-08-26 15:06:13"
+    },
     {
       "title_zh": "宇树智元共用一个大脑！神秘模型Demo炸场",
       "summary_zh": "神秘模型Demo炸场，10分钟一镜到底；神秘模型Demo炸场，10分钟一镜到底",
