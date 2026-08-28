@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-08-28 10:07:27",
-  "total_count": 136,
+  "last_updated": "2026-08-28 13:36:45",
+  "total_count": 139,
   "news": [
+    {
+      "title_zh": "商汤大装置助力智象未来实现视频生成业务向国产算力无感迁移",
+      "summary_zh": "商汤大装置助力智象未来实现视频生成业务向国产算力无感迁移；国产算力跑通视频生成规模化应用",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "视频",
+        "算力",
+        "国产"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/480227.html",
+      "pub_date": "2026-08-28 04:09:39",
+      "created_at": "2026-08-28 13:36:45"
+    },
+    {
+      "title_zh": "智谱 GLM",
+      "summary_zh": "智谱 GLM-5.3-Flash上线，商汤大装置提供国产算力支持；国产异构助力前沿智能进入普惠时代",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "国产",
+        "支持",
+        "装置"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/480223.html",
+      "pub_date": "2026-08-28 04:06:16",
+      "created_at": "2026-08-28 13:36:45"
+    },
+    {
+      "title_zh": "高德发布首个无长程依赖的万帧级流式3D重建模型ABot",
+      "summary_zh": "高德发布首个无长程依赖的万帧级流式3D重建模型ABot-Recon，以12帧重建万帧3D场景；8月28日，阿里巴巴集团旗下高德正式发布首个无长程依赖的万帧级流式3D重建模型ABot-Recon",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "发布",
+        "依赖",
+        "流式"
+      ],
+      "importance_score": 6.6,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/480208.html",
+      "pub_date": "2026-08-28 03:45:45",
+      "created_at": "2026-08-28 13:36:45"
+    },
     {
       "title_zh": "HuggingFace被曝卖身英伟达",
       "summary_zh": "HuggingFace被曝卖身英伟达：129亿美元；Hugging Face这把是真全员财富自由了啊o(╥﹏╥)o",
