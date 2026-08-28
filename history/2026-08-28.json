@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-08-28 10:07:27",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "HuggingFace被曝卖身英伟达",
+      "summary_zh": "HuggingFace被曝卖身英伟达：129亿美元；Hugging Face这把是真全员财富自由了啊o(╥﹏╥)o",
+      "category": {
+        "l1": "行业",
+        "l2": "开源"
+      },
+      "tags": [
+        "开源",
+        "平台",
+        "财富"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/480186.html",
+      "pub_date": "2026-08-28 01:40:22",
+      "created_at": "2026-08-28 10:07:27"
+    },
+    {
+      "title_zh": "MiniMax ARR暴涨500%",
+      "summary_zh": "MiniMax ARR暴涨500%，token暴涨2000%；好能增长，好能商业化啊",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "增长",
+        "商业化",
+        "好能"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/480092.html",
+      "pub_date": "2026-08-27 12:16:10",
+      "created_at": "2026-08-28 10:07:27"
+    },
+    {
+      "title_zh": "基元律动累计融资数千万美元",
+      "summary_zh": "基元律动累计融资数千万美元，推出“中国版OpenRouter”；近日，AI基础设施公司基元律动（TokenRhythm）宣布完成新一轮融资，融资额达数千万美元",
+      "category": {
+        "l1": "厂商",
+        "l2": "聚合"
+      },
+      "tags": [
+        "融资",
+        "律动",
+        "基元"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/480079.html",
+      "pub_date": "2026-08-27 05:43:00",
+      "created_at": "2026-08-28 10:07:27"
+    }
+  ]
+}
