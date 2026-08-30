@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-08-31 06:21:33",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "3秒可处理200份PDF",
+      "summary_zh": "3秒可处理200份PDF",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "200",
+        "PDF",
+        "处理"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/481075.html",
+      "pub_date": "2026-08-29 12:26:49",
+      "created_at": "2026-08-31 06:21:33"
+    },
+    {
+      "title_zh": "Coding不再是程序员专属！阿里Qoder这波有点绝",
+      "summary_zh": "Coding不再是程序员专属；Coding正在变成Al世界的数字执行力",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "数字",
+        "世界",
+        "程序员"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/480940.html",
+      "pub_date": "2026-08-29 12:11:37",
+      "created_at": "2026-08-31 06:21:33"
+    },
+    {
+      "title_zh": "OpenClaw：红过，爱过，散了",
+      "summary_zh": "OpenClaw：红过，爱过，散了；龙虾退潮，Harness上位",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "退潮",
+        "上位",
+        "OpenClaw"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/08/480855.html",
+      "pub_date": "2026-08-29 12:00:51",
+      "created_at": "2026-08-31 06:21:33"
+    }
+  ]
+}
