@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-09-02 06:25:22",
-  "total_count": 154,
+  "last_updated": "2026-09-03 06:26:45",
+  "total_count": 157,
   "news": [
+    {
+      "title_zh": "SkyProduction天工工作台",
+      "summary_zh": "SkyProduction天工工作台：从剧本到成片，一套工作台把精品短剧创作真正跑起来；SkyProduction（天工工作台）全新版本于8月31日正式上线",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "工作台",
+        "天工",
+        "短剧"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/483274.html",
+      "pub_date": "2026-09-02 09:22:16",
+      "created_at": "2026-09-03 06:26:45"
+    },
+    {
+      "title_zh": "还在为大模型洗数据熬夜？蚂蚁拿下VLDB工业最佳论文",
+      "summary_zh": "蚂蚁拿下VLDB工业最佳论文，一套宽表搞定35PB语料，效率狂飙5.6倍；蚂蚁集团推出统一宽表系统OmniTable，论文获评VLDB 2026工业赛道最佳论文",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "蚂蚁",
+        "工业",
+        "语料"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/483104.html",
+      "pub_date": "2026-09-02 06:20:17",
+      "created_at": "2026-09-03 06:26:45"
+    },
+    {
+      "title_zh": "阿里更新旗舰模型Qwen3.8",
+      "summary_zh": "阿里更新旗舰模型Qwen3.8-Max，前端编程能力跃居全球第一；阿里更新旗舰模型Qwen3.8-Max，前端编程能力跃居全球第一",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "跃居",
+        "模型",
+        "能力"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/483101.html",
+      "pub_date": "2026-09-02 06:10:26",
+      "created_at": "2026-09-03 06:26:45"
+    },
     {
       "title_zh": "3秒出片比播放还快",
       "summary_zh": "3秒出片比播放还快，MiniMax打开了AI视频的实时商业化路径；3秒出片比播放还快，MiniMax打开了AI视频的实时商业化路径",
