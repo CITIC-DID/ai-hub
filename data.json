@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-09-03 06:26:45",
-  "total_count": 157,
+  "last_updated": "2026-09-04 06:32:54",
+  "total_count": 160,
   "news": [
+    {
+      "title_zh": "“没有Token的CS学生，应立即退学”",
+      "summary_zh": "“没有Token的CS学生，应立即退学”；禁止古法编程、Token自费",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "编程",
+        "学生",
+        "退学"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/483839.html",
+      "pub_date": "2026-09-03 11:32:08",
+      "created_at": "2026-09-04 06:32:54"
+    },
+    {
+      "title_zh": "腾讯WorkBuddy联名硬件来了！首批100多家伙伴入场",
+      "summary_zh": "腾讯WorkBuddy联名硬件来了；眼镜、耳机、麦克风都来了",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "眼镜",
+        "入场",
+        "联名"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/483786.html",
+      "pub_date": "2026-09-03 11:25:29",
+      "created_at": "2026-09-04 06:32:54"
+    },
+    {
+      "title_zh": "世界生成模型来了3D头部玩家",
+      "summary_zh": "世界生成模型来了3D头部玩家，可进入生产管线的场景级生成时代来临；单图直出场景，顶会最佳论文落地",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "场景",
+        "生成",
+        "进入"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/483189.html",
+      "pub_date": "2026-09-03 10:18:36",
+      "created_at": "2026-09-04 06:32:54"
+    },
     {
       "title_zh": "SkyProduction天工工作台",
       "summary_zh": "SkyProduction天工工作台：从剧本到成片，一套工作台把精品短剧创作真正跑起来；SkyProduction（天工工作台）全新版本于8月31日正式上线",
