@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-09-04 06:32:54",
-  "total_count": 160,
+  "last_updated": "2026-09-05 06:25:24",
+  "total_count": 163,
   "news": [
+    {
+      "title_zh": "趋境科技与摩尔线程达成战略合作",
+      "summary_zh": "趋境科技与摩尔线程达成战略合作，高品质 AI Token 国产异构方案性价比超越国际先进算力；国产卡跑出高品质 AI Token 生产级性能",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "国产",
+        "线程",
+        "达成"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/484547.html",
+      "pub_date": "2026-09-04 09:23:24",
+      "created_at": "2026-09-05 06:25:24"
+    },
+    {
+      "title_zh": "机器人不能停下来等模型",
+      "summary_zh": "机器人不能停下来等模型：星尘发布 SmoothRL，让在线强化学习跟上大模型的异步推理；星尘智能（Astribot） 基座模型团队发布能异步执行的在线强化学习框架 SmoothRL",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "模型",
+        "发布",
+        "星尘"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/484437.html",
+      "pub_date": "2026-09-04 09:19:29",
+      "created_at": "2026-09-05 06:25:24"
+    },
+    {
+      "title_zh": "九问ScienceDiscovery实现树搜索驱动RSI",
+      "summary_zh": "九问ScienceDiscovery实现树搜索驱动RSI，加速科学发现，小时级写出通用积分器，低成本找出物理科学规律；不训练模型、不调参数",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "科学",
+        "小时",
+        "规律"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/484293.html",
+      "pub_date": "2026-09-04 08:57:14",
+      "created_at": "2026-09-05 06:25:24"
+    },
     {
       "title_zh": "“没有Token的CS学生，应立即退学”",
       "summary_zh": "“没有Token的CS学生，应立即退学”；禁止古法编程、Token自费",
