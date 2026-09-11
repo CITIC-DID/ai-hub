@@ -37,7 +37,7 @@ jobs:
 
       - name: 4 安装 Playwright 浏览器二进制文件
         run: |
-          npx playwright install chromium
+          playwright install chromium --with-deps
 
       - name: 5. 执行爬虫脚本
         env:
