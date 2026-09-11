@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-09-12 06:26:24",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "银行Agent上岗",
+      "summary_zh": "银行Agent上岗：4200万小微经营者可用，信贷、票据、财税一把梭；看清「一个真正的人」",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "信贷",
+        "财税",
+        "经营者"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/487631.html",
+      "pub_date": "2026-09-11 18:02:36",
+      "created_at": "2026-09-12 06:26:24"
+    },
+    {
+      "title_zh": "啊？Anthropic最高320万招销售",
+      "summary_zh": "Anthropic最高320万招销售，只为服务Meta；原来你俩互相下单呢",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "销售",
+        "服务",
+        "万招"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/487573.html",
+      "pub_date": "2026-09-11 14:05:16",
+      "created_at": "2026-09-12 06:26:24"
+    },
+    {
+      "title_zh": "百度秒哒再升级！让最懂业务的人，亲手造自己的系统",
+      "summary_zh": "百度秒哒再升级；让最懂业务的人，亲手造自己的系统",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "开发",
+        "交付",
+        "百度"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/487415.html",
+      "pub_date": "2026-09-11 13:59:09",
+      "created_at": "2026-09-12 06:26:24"
+    }
+  ]
+}
