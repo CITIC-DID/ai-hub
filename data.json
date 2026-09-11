@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-09-05 06:25:24",
-  "total_count": 163,
+  "last_updated": "2026-09-11 11:48:54",
+  "total_count": 166,
   "news": [
+    {
+      "title_zh": "OpenAI这是拿千禧年难题当Benchmark刷啊。。。",
+      "summary_zh": "OpenAI这是拿千禧年难题当Benchmark刷啊；爆料直指霍奇猜想",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "直指",
+        "猜想",
+        "爆料"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/487092.html",
+      "pub_date": "2026-09-11 01:46:55",
+      "created_at": "2026-09-11 11:48:54"
+    },
+    {
+      "title_zh": "吹爆开源！RunningHub让MiniMax H3满血提速12倍",
+      "summary_zh": "RunningHub让MiniMax H3满血提速12倍，本地部署照样起飞；15秒视频，50秒出片",
+      "category": {
+        "l1": "行业",
+        "l2": "开源"
+      },
+      "tags": [
+        "起飞",
+        "满血",
+        "提速"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/487055.html",
+      "pub_date": "2026-09-11 00:55:01",
+      "created_at": "2026-09-11 11:48:54"
+    },
+    {
+      "title_zh": "ECCV上，顶尖学者们开始研究如何让AI做生意了",
+      "summary_zh": "ECCV上，顶尖学者们开始研究如何让AI做生意了；多模态AI大牛轮番登台，全球64支团队组团解题",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "研究",
+        "全球",
+        "组团"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/486934.html",
+      "pub_date": "2026-09-10 10:17:46",
+      "created_at": "2026-09-11 11:48:54"
+    },
     {
       "title_zh": "趋境科技与摩尔线程达成战略合作",
       "summary_zh": "趋境科技与摩尔线程达成战略合作，高品质 AI Token 国产异构方案性价比超越国际先进算力；国产卡跑出高品质 AI Token 生产级性能",
