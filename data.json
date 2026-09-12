@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-09-12 06:26:24",
-  "total_count": 169,
+  "last_updated": "2026-09-13 06:26:01",
+  "total_count": 172,
   "news": [
+    {
+      "title_zh": "“算力中国·年度卓越成就”发布 太初元碁超智融合计算系统入选",
+      "summary_zh": "“算力中国·年度卓越成就”发布 太初元碁超智融合计算系统入选；太初（杭州）集成电路有限公司新一代超智融合计算系统元碁Hypertintellix入选“算力中国·年度卓越成就”",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "入选",
+        "年度",
+        "中国"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/487860.html",
+      "pub_date": "2026-09-12 11:38:16",
+      "created_at": "2026-09-13 06:26:01"
+    },
+    {
+      "title_zh": "A社承认Claude安全对齐存在缺陷，但“尚无解决方案”",
+      "summary_zh": "A社承认Claude安全对齐存在缺陷，但“尚无解决方案”；Claude越界攻击真实系统，并非只是测试系统的设置问题，模型本身的安全问题也出了问题",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "问题",
+        "系统",
+        "存在"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/487796.html",
+      "pub_date": "2026-09-12 08:49:02",
+      "created_at": "2026-09-13 06:26:01"
+    },
+    {
+      "title_zh": "探索RSI，生数新世界模型让机器人开始自我进化",
+      "summary_zh": "探索RSI，生数新世界模型让机器人开始自我进化；触觉、记忆、Ego数据、自进化……这个世界模型全都有",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "进化",
+        "模型",
+        "机器人"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/487752.html",
+      "pub_date": "2026-09-12 08:15:31",
+      "created_at": "2026-09-13 06:26:01"
+    },
     {
       "title_zh": "银行Agent上岗",
       "summary_zh": "银行Agent上岗：4200万小微经营者可用，信贷、票据、财税一把梭；看清「一个真正的人」",
