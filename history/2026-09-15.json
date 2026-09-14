@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-09-15 06:28:23",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "首届蚂蚁灵波具身大模型挑战赛正式启动",
+      "summary_zh": "首届蚂蚁灵波具身大模型挑战赛正式启动；通过这场大赛，蚂蚁灵波希望将 LingBot-VLA 进一步推向更广泛的开发者社区和高校科研社区",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "社区",
+        "蚂蚁",
+        "模型"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/489105.html",
+      "pub_date": "2026-09-14 09:47:07",
+      "created_at": "2026-09-15 06:28:23"
+    },
+    {
+      "title_zh": "全国唯一！商汤大装置临港AIDC获“算效+算电”双5A认证",
+      "summary_zh": "商汤大装置临港AIDC获“算效+算电”双5A认证；业界首个5A算电协同认证",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "认证",
+        "商汤",
+        "临港"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/489106.html",
+      "pub_date": "2026-09-14 09:46:40",
+      "created_at": "2026-09-15 06:28:23"
+    },
+    {
+      "title_zh": "探索RSI，生数新世界模型让机器人开始自我进化",
+      "summary_zh": "探索RSI，生数新世界模型让机器人开始自我进化；探索RSI，生数新世界模型让机器人开始自我进化",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "机器人",
+        "开始",
+        "生数"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/489037.html",
+      "pub_date": "2026-09-14 09:36:28",
+      "created_at": "2026-09-15 06:28:23"
+    }
+  ]
+}
