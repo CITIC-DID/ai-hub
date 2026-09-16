@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-09-16 06:26:50",
-  "total_count": 181,
+  "last_updated": "2026-09-17 06:26:26",
+  "total_count": 184,
   "news": [
+    {
+      "title_zh": "通用能力不打折",
+      "summary_zh": "通用能力不打折，空间具身智能断层领先；ZDTaichu5.0-9B国产开源，跻身全球多模态第一梯队",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "空间",
+        "全球",
+        "通用"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/490839.html",
+      "pub_date": "2026-09-16 13:08:20",
+      "created_at": "2026-09-17 06:26:26"
+    },
+    {
+      "title_zh": "AI大模型工场2026 AI产业生态大会今日举办",
+      "summary_zh": "AI大模型工场2026 AI产业生态大会今日举办，大咖同台共探智能生长与产业共生；9月15日，由AI大模型工场主办的“2026 AI产业生态大会”在北京举行",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "产业",
+        "大会",
+        "生态"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/490760.html",
+      "pub_date": "2026-09-16 08:51:02",
+      "created_at": "2026-09-17 06:26:26"
+    },
+    {
+      "title_zh": "高通技术公司携手中兴努比亚和豆包手机助手",
+      "summary_zh": "高通技术公司携手中兴努比亚和豆包手机助手，共同推动智能手机迈入个人AI新时代；第五代骁龙8至尊版赋能全新AI智能体手机努比亚NaviX Ultra，加速智能体体验规模化落地",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "努比亚",
+        "智能",
+        "手机"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/490756.html",
+      "pub_date": "2026-09-16 08:18:44",
+      "created_at": "2026-09-17 06:26:26"
+    },
     {
       "title_zh": "梁文锋CFO到位！投过智谱MiniMax",
       "summary_zh": "梁文锋CFO到位；投过智谱MiniMax",
