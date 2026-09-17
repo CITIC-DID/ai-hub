@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-09-18 06:25:12",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "从“会回答”到“会办事”，vivo如何解AI手机这道题？",
+      "summary_zh": "从“会回答”到“会办事”，vivo如何解AI手机这道题；构建个体专属AI助理",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "构建",
+        "个体",
+        "道题"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/491649.html",
+      "pub_date": "2026-09-17 12:03:24",
+      "created_at": "2026-09-18 06:25:11"
+    },
+    {
+      "title_zh": "Claude Code团队讲究啊，这都往外说",
+      "summary_zh": "Claude Code团队讲究啊，这都往外说；工程师的核心永远是Problem Solving",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "讲究",
+        "核心",
+        "团队"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/491596.html",
+      "pub_date": "2026-09-17 11:56:13",
+      "created_at": "2026-09-18 06:25:11"
+    },
+    {
+      "title_zh": "图形学宗师童欣加盟Meshy",
+      "summary_zh": "图形学宗师童欣加盟Meshy，要做“AI for Fun”的头号玩家；他要和这一代最富有想象力的年轻人一起，去创造一个新的图形学",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "图形学",
+        "年轻人",
+        "玩家"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/491522.html",
+      "pub_date": "2026-09-17 09:42:12",
+      "created_at": "2026-09-18 06:25:12"
+    }
+  ]
+}
