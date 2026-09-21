@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-09-21 08:17:32",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "剪映发了个大的",
+      "summary_zh": "刚刚，剪映发了个大的：AI生视频和AI剪辑的壁，被打破了；剪映Hub+剪映助手，好用",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "剪映",
+        "视频",
+        "剪辑"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/492973.html",
+      "pub_date": "2026-09-20 14:30:26",
+      "created_at": "2026-09-21 08:17:32"
+    },
+    {
+      "title_zh": "华为首发企业AI白皮书",
+      "summary_zh": "华为首发企业AI白皮书：AI让员工更快了，怎样让整个企业受益；AI越来越能干，企业该怎么用",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "企业",
+        "受益",
+        "能干"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/493068.html",
+      "pub_date": "2026-09-20 14:23:52",
+      "created_at": "2026-09-21 08:17:32"
+    },
+    {
+      "title_zh": "一张3090就能跑！全栈国产模型，把AI办公搬到企业本地",
+      "summary_zh": "全栈国产模型，把AI办公搬到企业本地；AI办公这块蛋糕，中国电信可能要先切走一块了",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "运营商"
+      },
+      "tags": [
+        "办公",
+        "模型",
+        "蛋糕"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/492946.html",
+      "pub_date": "2026-09-20 12:22:41",
+      "created_at": "2026-09-21 08:17:32"
+    }
+  ]
+}
