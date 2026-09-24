@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-09-24 08:31:10",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "联想亮相阿里云栖大会：联想天禧AI把超级组织落地到端侧",
+      "summary_zh": "联想亮相阿里云栖大会：联想天禧AI把超级组织落地到端侧；联想天禧AI携全场景多端产品矩阵亮相阿里云栖大会",
+      "category": {
+        "l1": "厂商",
+        "l2": "运营商"
+      },
+      "tags": [
+        "亮相",
+        "大会",
+        "矩阵"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/496609.html",
+      "pub_date": "2026-09-23 10:35:16",
+      "created_at": "2026-09-24 08:31:10"
+    },
+    {
+      "title_zh": "让Token生产更高效：异构混推的关键技术演进与创新实践",
+      "summary_zh": "让Token生产更高效：异构混推的关键技术演进与创新实践；商汤大装置异构混推创新实践与技术演进",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "实践",
+        "创新",
+        "异构"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/496578.html",
+      "pub_date": "2026-09-23 09:56:53",
+      "created_at": "2026-09-24 08:31:10"
+    },
+    {
+      "title_zh": "汇智智能发布Hellome",
+      "summary_zh": "汇智智能发布Hellome：国内首个FDE直连智能体服务平台，把AI交付周期压进“周”；企业AI服务迎来平台化交付时代",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "交付",
+        "迎来",
+        "平台"
+      ],
+      "importance_score": 6.6,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/496493.html",
+      "pub_date": "2026-09-23 09:50:26",
+      "created_at": "2026-09-24 08:31:10"
+    }
+  ]
+}
