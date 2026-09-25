@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-09-25 08:34:16",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "出海Agent“小元AI”入驻腾讯WorkBuddy",
+      "summary_zh": "出海Agent“小元AI”入驻腾讯WorkBuddy：找买家写开发信谈生意；懂出海，能记忆，自进化",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "生意",
+        "信谈",
+        "出海"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/496961.html",
+      "pub_date": "2026-09-24 14:20:14",
+      "created_at": "2026-09-25 08:34:16"
+    },
+    {
+      "title_zh": "PCIe显卡被低估了！内核补齐+通信重构",
+      "summary_zh": "内核补齐+通信重构，DeepSeek推理吞吐翻近7倍；1.5台6000D跑赢1台B300",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "重构",
+        "低估",
+        "补齐"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/496925.html",
+      "pub_date": "2026-09-24 14:17:48",
+      "created_at": "2026-09-25 08:34:16"
+    },
+    {
+      "title_zh": "时隔十年，AI大牛署名新论文",
+      "summary_zh": "时隔十年，AI大牛署名新论文；让自动驾驶“走一步想十步”",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "驾驶",
+        "自动",
+        "AI"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/496834.html",
+      "pub_date": "2026-09-24 12:58:55",
+      "created_at": "2026-09-25 08:34:16"
+    }
+  ]
+}
