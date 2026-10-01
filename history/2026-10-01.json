@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-10-01 09:18:35",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜",
+      "summary_zh": "OpenAI推理之父最新访谈；千禧年难题的突破，10000个Agent最多占了10%的功劳",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "开胃菜",
+        "智能",
+        "访谈"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/499654.html",
+      "pub_date": "2026-09-30 14:03:43",
+      "created_at": "2026-10-01 09:18:35"
+    },
+    {
+      "title_zh": "直播回顾：工业AI的下一个机会在哪？",
+      "summary_zh": "直播回顾：工业AI的下一个机会在哪；企业真正开始做工业AI时，又该从哪里下手",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "工业",
+        "企业",
+        "现场"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/499605.html",
+      "pub_date": "2026-09-30 12:11:24",
+      "created_at": "2026-10-01 09:18:35"
+    },
+    {
+      "title_zh": "Anthropic，你是来给智谱打广告的吧！",
+      "summary_zh": "Anthropic，你是来给智谱打广告的吧；实测说GLM-5.3很强",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "打广告",
+        "Anthropic",
+        "智谱"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/09/499597.html",
+      "pub_date": "2026-09-30 10:04:12",
+      "created_at": "2026-10-01 09:18:35"
+    }
+  ]
+}
