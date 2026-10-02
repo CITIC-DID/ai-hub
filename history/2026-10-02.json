@@ -1,0 +1,44 @@
+{
+  "last_updated": "2026-10-02 09:42:27",
+  "total_count": 2,
+  "news": [
+    {
+      "title_zh": "何恺明团队新作：看猫片就能学会ARC挑战",
+      "summary_zh": "何恺明团队新作：看猫片就能学会ARC挑战；用ImageNet训练encoder",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "猫片",
+        "挑战",
+        "学会"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/499812.html",
+      "pub_date": "2026-10-01 15:06:30",
+      "created_at": "2026-10-02 09:42:26"
+    },
+    {
+      "title_zh": "谷歌Gemini 4突然发布！RSI加持",
+      "summary_zh": "谷歌Gemini 4突然发布；RSI加持，GPT和Opus都让让",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "发布",
+        "加持",
+        "Gemini"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/499663.html",
+      "pub_date": "2026-10-01 15:02:14",
+      "created_at": "2026-10-02 09:42:27"
+    }
+  ]
+}
