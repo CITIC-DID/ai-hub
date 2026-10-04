@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-10-03 09:12:41",
-  "total_count": 231,
+  "last_updated": "2026-10-04 08:38:22",
+  "total_count": 234,
   "news": [
+    {
+      "title_zh": "DeepSeek扩招！弹性计算团队大量HC",
+      "summary_zh": "DeepSeek扩招；弹性计算团队大量HC，尤其需要资深工程师",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "需要",
+        "大量",
+        "计算"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/501381.html",
+      "pub_date": "2026-10-03 07:54:43",
+      "created_at": "2026-10-04 08:38:21"
+    },
+    {
+      "title_zh": "OpenAI安全团队持续地震！负责人离职",
+      "summary_zh": "OpenAI安全团队持续地震；负责人离职，三名员工因泄密被开",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "负责人",
+        "员工",
+        "离职"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/501368.html",
+      "pub_date": "2026-10-03 04:41:24",
+      "created_at": "2026-10-04 08:38:21"
+    },
+    {
+      "title_zh": "Jev估值100亿美元",
+      "summary_zh": "Jev估值100亿美元；创始人Diogo Almeida回答一切",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "创始人",
+        "回答",
+        "估值"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/500148.html",
+      "pub_date": "2026-10-03 02:38:19",
+      "created_at": "2026-10-04 08:38:22"
+    },
     {
       "title_zh": "openJiuwen X",
       "summary_zh": "openJiuwen X-Router自演进模型路由技术首发，昇腾亲和，Agent越跑越省，实测减少50+%Token消耗；让每一次请求选对模型，让每一次反馈都成为下一次更优、更省的选择",
