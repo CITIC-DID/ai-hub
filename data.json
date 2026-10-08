@@ -1,7 +1,254 @@
 {
-  "last_updated": "2026-10-07 09:33:16",
-  "total_count": 240,
+  "last_updated": "2026-10-08 09:56:36",
+  "total_count": 253,
   "news": [
+    {
+      "title_zh": "GPT-6今起免费用！拒答变少，话变多了",
+      "summary_zh": "拒答变少，话变多了；ChatGPT聊天框长出界面",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "拒答",
+        "界面",
+        "免费"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/501834.html",
+      "pub_date": "2026-10-08 01:07:19",
+      "created_at": "2026-10-08 09:56:32"
+    },
+    {
+      "title_zh": "Claude新模型发布！跑分暴击GPT",
+      "summary_zh": "Claude新模型发布；跑分暴击GPT-6 Luna，价格比梁文谷还便宜，OpenAI只能送重置卡挽尊",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "模型",
+        "重置",
+        "发布"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/501832.html",
+      "pub_date": "2026-10-08 01:04:00",
+      "created_at": "2026-10-08 09:56:33"
+    },
+    {
+      "title_zh": "诺贝尔化学奖揭晓，95岁法国教授圆梦",
+      "summary_zh": "诺贝尔化学奖揭晓，95岁法国教授圆梦；诺贝尔化学奖揭晓，95岁法国教授圆梦",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "法国",
+        "教授",
+        "圆梦"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/501825.html",
+      "pub_date": "2026-10-07 14:10:33",
+      "created_at": "2026-10-08 09:56:33"
+    },
+    {
+      "title_zh": "09-30",
+      "summary_zh": "双方今年3月已签署AI存储芯片与计算技术合作谅解备忘录，当时便有传闻称三星被AMD选为AI芯片合作方，此次会谈或推动合作落地",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "合作",
+        "会谈",
+        "芯片"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/31445",
+      "pub_date": "2026-10-08 01:56:32",
+      "created_at": "2026-10-08 09:56:33"
+    },
+    {
+      "title_zh": "09-30",
+      "summary_zh": "09-30 . AIbase 微软联手哈佛MIT端出生物学世界模型Project Quine，一个周末筛出抗癌候选物 微软研究院联合哈佛大学、麻省理工学院博德研究所，推出实验性多模态AI研究系统...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "世界",
+        "生物学",
+        "模型"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/31444",
+      "pub_date": "2026-10-08 01:56:32",
+      "created_at": "2026-10-08 09:56:34"
+    },
+    {
+      "title_zh": "09-30",
+      "summary_zh": "09-30 . AIbase 沃尔玛向门店 AI 海报下\"禁令\"：ChatGPT 生成的招牌一律不许挂 据《商业内幕》，沃尔玛29日明确禁止门店展示任何由AI工具制作的标识，以阻挡“AI垃圾内容...",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "招牌",
+        "生成",
+        "海报"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/31443",
+      "pub_date": "2026-10-08 01:56:32",
+      "created_at": "2026-10-08 09:56:34"
+    },
+    {
+      "title_zh": "09-30",
+      "summary_zh": "09-30 . AIbase LG 联手微软秀智能家居语音助手：可中途\"插话\"，年内登陆 ThinQ ON 据韩媒EtNews报道，LG电子在首尔江南区微软行业峰会推出与微软联合打造的智能家居A...",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "语音",
+        "模式",
+        "峰会"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/31442",
+      "pub_date": "2026-10-08 01:56:32",
+      "created_at": "2026-10-08 09:56:34"
+    },
+    {
+      "title_zh": "09-30",
+      "summary_zh": "09-30 . AIbase 豆包AI个人助手独立App实锤：定名“小豆”剑指全场景智能生态 字节跳动旗下豆包在AI领域布局迎来新里程碑；其个人助理方向探索项目“Spell”已正式定名为“小豆”...",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "版本",
+        "个人",
+        "独立"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/31440",
+      "pub_date": "2026-10-08 01:56:32",
+      "created_at": "2026-10-08 09:56:35"
+    },
+    {
+      "title_zh": "09-30",
+      "summary_zh": "09-30 . AIbase OpenAI与红帽等联合推进OCE1.0研发，打造面向AI代理的“企业级Kubernetes” OpenAI、红帽、英伟达等联合开发开源智能体框架企业级版OpenC...",
+      "category": {
+        "l1": "政策",
+        "l2": "开源"
+      },
+      "tags": [
+        "代理",
+        "回复",
+        "分析"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/31439",
+      "pub_date": "2026-10-08 01:56:32",
+      "created_at": "2026-10-08 09:56:35"
+    },
+    {
+      "title_zh": "09-30",
+      "summary_zh": "09-30 . AIbase 亏损超80亿、算力承诺546亿:Anthropic招股书揭开大模型顶流的真实账本 Anthropic向部分合作伙伴披露IPO招股书，拟以约2万亿美元估值推进上市；2...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "招股书",
+        "贡献",
+        "运营"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/31438",
+      "pub_date": "2026-10-08 01:56:32",
+      "created_at": "2026-10-08 09:56:36"
+    },
+    {
+      "title_zh": "09-30",
+      "summary_zh": "09-30 . AIbase 微软亮出生物学\"世界模型\"Project Quine：一个周末筛出抗癌候选物 微软研究院29日发布实验性多模态AI系统Project Quine，定位为面向生物学的...",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "生物学",
+        "处理",
+        "世界"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/31437",
+      "pub_date": "2026-10-08 01:56:32",
+      "created_at": "2026-10-08 09:56:36"
+    },
+    {
+      "title_zh": "09-30",
+      "summary_zh": "09-30 . AIbase 《纽约时报》揭 OpenAI 安全黑洞：员工预警遭无视，GPT-6.1 Astra 被迫搁置 《纽约时报》披露，OpenAI模型失控前数月，两名员工已邮件高层报警，...",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "模型",
+        "测试",
+        "员工"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/31436",
+      "pub_date": "2026-10-08 01:56:32",
+      "created_at": "2026-10-08 09:56:36"
+    },
+    {
+      "title_zh": "09-30",
+      "summary_zh": "09-30 . AIbase 谷歌宣布向免费用户全面开放 Gemini Skills，Gems 功能将于 11 月完成历史性整合 谷歌宣布，Gemini Skills 自定义指令服务将从此前仅限...",
+      "category": {
+        "l1": "行业",
+        "l2": "开源"
+      },
+      "tags": [
+        "整合",
+        "升级",
+        "全面"
+      ],
+      "importance_score": 7.5,
+      "source": "AIBase",
+      "region": "国内",
+      "url": "https://www.aibase.com/zh/news/31435",
+      "pub_date": "2026-10-08 01:56:32",
+      "created_at": "2026-10-08 09:56:36"
+    },
     {
       "title_zh": "OpenAI一夜甩出722篇数学论文！黎曼霍奇BSD全上阵",
       "summary_zh": "OpenAI一夜甩出722篇数学论文；黎曼霍奇BSD全上阵，数学家：读不过来",
