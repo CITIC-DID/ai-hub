@@ -1,7 +1,45 @@
 {
-  "last_updated": "2026-10-12 09:20:27",
-  "total_count": 263,
+  "last_updated": "2026-10-13 11:03:37",
+  "total_count": 265,
   "news": [
+    {
+      "title_zh": "华为AI靠RSI通关25款游戏！操作次数比人类少56%",
+      "summary_zh": "华为AI靠RSI通关25款游戏；游戏打到21:0，AI甚至不用再调用大模型了",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "游戏",
+        "次数",
+        "操作"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/502654.html",
+      "pub_date": "2026-10-12 05:48:36",
+      "created_at": "2026-10-13 11:03:37"
+    },
+    {
+      "title_zh": "智谱新模型，490 tokens/s！",
+      "summary_zh": "智谱新模型，490 tokens/s；GLM「速度仙人」来了",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "模型",
+        "速度",
+        "智谱"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/502649.html",
+      "pub_date": "2026-10-12 02:37:04",
+      "created_at": "2026-10-13 11:03:37"
+    },
     {
       "title_zh": "王的猜想，刚刚扩展到四维",
       "summary_zh": "王的猜想，刚刚扩展到四维；王的猜想，刚刚扩展到四维",
