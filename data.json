@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-10-13 11:03:37",
-  "total_count": 265,
+  "last_updated": "2026-10-14 09:14:14",
+  "total_count": 268,
   "news": [
+    {
+      "title_zh": "iPhone断网跑35B多模态！国产开源新模型",
+      "summary_zh": "iPhone断网跑35B多模态；国产开源新模型，只占3G内存",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "开源",
+        "国产",
+        "面壁"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/503109.html",
+      "pub_date": "2026-10-13 20:55:15",
+      "created_at": "2026-10-14 09:14:13"
+    },
+    {
+      "title_zh": "魔法原子具身Agent框架拿下MolmoSpaces全球第一",
+      "summary_zh": "魔法原子具身Agent框架拿下MolmoSpaces全球第一；让VLA从“演示可用”逼近“产线可用”",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "可用",
+        "框架",
+        "逼近"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/503107.html",
+      "pub_date": "2026-10-13 11:05:39",
+      "created_at": "2026-10-14 09:14:13"
+    },
+    {
+      "title_zh": "梁文锋投了Swin Transformer作者！DeepSeek开始布局具身大脑",
+      "summary_zh": "梁文锋投了Swin Transformer作者；DeepSeek开始布局具身大脑",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "开始",
+        "布局",
+        "大脑"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/503093.html",
+      "pub_date": "2026-10-13 09:33:37",
+      "created_at": "2026-10-14 09:14:14"
+    },
     {
       "title_zh": "华为AI靠RSI通关25款游戏！操作次数比人类少56%",
       "summary_zh": "华为AI靠RSI通关25款游戏；游戏打到21:0，AI甚至不用再调用大模型了",
