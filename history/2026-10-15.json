@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-10-15 08:32:01",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "抢先盘点2026全球开发者先锋大会暨国际具身智能技能大赛十大亮点！",
+      "summary_zh": "抢先盘点2026全球开发者先锋大会暨国际具身智能技能大赛十大亮点；“具身进实景，劳动最光荣”",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "具身",
+        "国际",
+        "开发者"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/503294.html",
+      "pub_date": "2026-10-14 10:41:47",
+      "created_at": "2026-10-15 08:32:01"
+    },
+    {
+      "title_zh": "阶跃终端首款「Agent手机」STEPX Neo正式发布",
+      "summary_zh": "阶跃终端首款「Agent手机」STEPX Neo正式发布，创客先行；这妥妥是个物理版Agent啊",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "首款",
+        "终端",
+        "发布"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/503244.html",
+      "pub_date": "2026-10-14 08:01:18",
+      "created_at": "2026-10-15 08:32:01"
+    },
+    {
+      "title_zh": "智能不出彩的「领克」，刚靠一次坠崖事故出圈了",
+      "summary_zh": "智能不出彩的「领克」，刚靠一次坠崖事故出圈了；汽车竞争正在回归汽车本身",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "出彩",
+        "汽车",
+        "智能"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/503231.html",
+      "pub_date": "2026-10-14 07:12:02",
+      "created_at": "2026-10-15 08:32:01"
+    }
+  ]
+}
