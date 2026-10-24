@@ -1,7 +1,26 @@
 {
-  "last_updated": "2026-10-23 08:41:03",
-  "total_count": 278,
+  "last_updated": "2026-10-24 08:43:31",
+  "total_count": 279,
   "news": [
+    {
+      "title_zh": "百度世界2026前瞻",
+      "summary_zh": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "百度",
+        "论坛",
+        "世界"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/504901.html",
+      "pub_date": "2026-10-23 07:35:51",
+      "created_at": "2026-10-24 08:43:31"
+    },
     {
       "title_zh": "特斯拉利润腰斩",
       "summary_zh": "特斯拉利润腰斩，一夜跌没“通用汽车”；马斯克：FSD在中国也会遥遥领先",
