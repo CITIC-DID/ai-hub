@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-10-30 09:58:19",
-  "total_count": 284,
+  "last_updated": "2026-10-31 09:36:22",
+  "total_count": 287,
   "news": [
+    {
+      "title_zh": "英伟达团队基于 MiniMax H3 开源视频增强方案",
+      "summary_zh": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成；英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "增强",
+        "视频",
+        "方案"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/506743.html",
+      "pub_date": "2026-10-30 07:31:11",
+      "created_at": "2026-10-31 09:36:21"
+    },
+    {
+      "title_zh": "RSI立大功！国产开源登顶全球第一",
+      "summary_zh": "国产开源登顶全球第一，1.3B OXR重塑OCR",
+      "category": {
+        "l1": "行业",
+        "l2": "开源"
+      },
+      "tags": [
+        "登顶",
+        "重塑",
+        "开源"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/506686.html",
+      "pub_date": "2026-10-30 05:52:47",
+      "created_at": "2026-10-31 09:36:21"
+    },
+    {
+      "title_zh": "Claude新模型曝光：新Fable，新Opus…",
+      "summary_zh": "Claude新模型曝光：新Fable，新Opus…；Claude新模型曝光：新Fable，新Opus…",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "Claude",
+        "Fable",
+        "Opus"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/506674.html",
+      "pub_date": "2026-10-30 05:50:44",
+      "created_at": "2026-10-31 09:36:22"
+    },
     {
       "title_zh": "文远知行001号员工带队，景烁科技首轮融资数千万美元",
       "summary_zh": "文远知行001号员工带队，景烁科技首轮融资数千万美元；10月29日，文远知行披露旗下子公司景烁科技首次融资进展",
