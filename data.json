@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-10-31 09:36:22",
-  "total_count": 287,
+  "last_updated": "2026-11-01 09:10:52",
+  "total_count": 290,
   "news": [
+    {
+      "title_zh": "你的8G iPad里有12G内存！库克走了但他的刀法追着我砍",
+      "summary_zh": "你的8G iPad里有12G内存；库克走了但他的刀法追着我砍",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "河里",
+        "苹果",
+        "翻红"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/506884.html",
+      "pub_date": "2026-10-31 05:17:50",
+      "created_at": "2026-11-01 09:10:52"
+    },
+    {
+      "title_zh": "世界模型首次指导设计芯片！超大核NPU700TOPS",
+      "summary_zh": "超大核NPU700TOPS，99%算力可用；AI算力利用“九九成”",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "算力",
+        "设计",
+        "指导"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/506866.html",
+      "pub_date": "2026-10-31 05:11:19",
+      "created_at": "2026-11-01 09:10:52"
+    },
+    {
+      "title_zh": "Claude宣布取消5小时限制！首批Ultra用户已「解封」",
+      "summary_zh": "刚刚，Claude宣布取消5小时限制；首批Ultra用户已「解封」",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "限制",
+        "小时",
+        "宣布"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/10/506855.html",
+      "pub_date": "2026-10-31 05:05:29",
+      "created_at": "2026-11-01 09:10:52"
+    },
     {
       "title_zh": "英伟达团队基于 MiniMax H3 开源视频增强方案",
       "summary_zh": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成；英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-...",
