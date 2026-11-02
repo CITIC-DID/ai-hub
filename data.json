@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-11-01 09:10:52",
-  "total_count": 290,
+  "last_updated": "2026-11-02 09:30:51",
+  "total_count": 293,
   "news": [
+    {
+      "title_zh": "三年前布局，今年爆火丨西湖大学成立新中心",
+      "summary_zh": "三年前布局，今年爆火丨西湖大学成立新中心；西湖世界模型研究中心成立",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "中心",
+        "西湖",
+        "成立"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507076.html",
+      "pub_date": "2026-11-01 13:28:10",
+      "created_at": "2026-11-02 09:30:51"
+    },
+    {
+      "title_zh": "Claude紧急叫停",
+      "summary_zh": "暗改Harness禁止逆向游戏；暗改Harness禁止逆向游戏",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "禁止",
+        "暗改",
+        "游戏"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507038.html",
+      "pub_date": "2026-11-01 13:09:55",
+      "created_at": "2026-11-02 09:30:51"
+    },
+    {
+      "title_zh": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考",
+      "summary_zh": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考；让AI像牛顿一样思考",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "新作",
+        "代数",
+        "世界"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507031.html",
+      "pub_date": "2026-11-01 08:02:37",
+      "created_at": "2026-11-02 09:30:51"
+    },
     {
       "title_zh": "你的8G iPad里有12G内存！库克走了但他的刀法追着我砍",
       "summary_zh": "你的8G iPad里有12G内存；库克走了但他的刀法追着我砍",
