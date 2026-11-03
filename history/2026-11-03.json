@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-11-03 11:28:38",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "B站举办2026超级科学晚",
+      "summary_zh": "B站举办2026超级科学晚，脑机接口、人造太阳等前沿科技齐亮相；10月31日，2026年bilibili超级科学晚（以下简称“B站科学晚”）在北京如期举行",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "科学",
+        "太阳",
+        "人造"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507339.html",
+      "pub_date": "2026-11-03 02:02:05",
+      "created_at": "2026-11-03 11:28:37"
+    },
+    {
+      "title_zh": "6 Astra能直接修改Qwen权重",
+      "summary_zh": "MIT：GPT-6 Astra能直接修改Qwen权重，数学能力暴涨6倍；指令执行能力也同步提升",
+      "category": {
+        "l1": "行业",
+        "l2": "开源"
+      },
+      "tags": [
+        "能力",
+        "权重",
+        "数学"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507322.html",
+      "pub_date": "2026-11-03 01:57:30",
+      "created_at": "2026-11-03 11:28:37"
+    },
+    {
+      "title_zh": "爱诗科技PixVerse 与 OpenAI 共同推出产品集成和创作者教育计划",
+      "summary_zh": "爱诗科技PixVerse 与 OpenAI 共同推出产品集成和创作者教育计划，高效打通 AI 创意全流程；近日，爱诗科技（AIsphere）旗下模型和开放平台PixVerse 与 OpenAI ...",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "旗下",
+        "教育",
+        "集成"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507313.html",
+      "pub_date": "2026-11-03 01:46:55",
+      "created_at": "2026-11-03 11:28:38"
+    }
+  ]
+}
