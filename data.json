@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-11-03 11:28:38",
-  "total_count": 296,
+  "last_updated": "2026-11-04 10:21:04",
+  "total_count": 299,
   "news": [
+    {
+      "title_zh": "机器人干活，AI当厂长！这家巨头要造下一代自主智能仓",
+      "summary_zh": "机器人干活，AI当厂长；AI接管调度运营，仓库越干越聪明",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "要造",
+        "巨头",
+        "运营"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507507.html",
+      "pub_date": "2026-11-03 13:57:11",
+      "created_at": "2026-11-04 10:21:04"
+    },
+    {
+      "title_zh": "智己LS8纯电版背后：8年研发底盘，两大厂联合开发电池",
+      "summary_zh": "智己LS8纯电版背后：8年研发底盘，两大厂联合开发电池；两位CTO，关起门来吵架",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "大厂",
+        "底盘",
+        "电池"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507473.html",
+      "pub_date": "2026-11-03 12:57:35",
+      "created_at": "2026-11-04 10:21:04"
+    },
+    {
+      "title_zh": "模型谁都买得到，拉开差距的是AI生产力系统",
+      "summary_zh": "模型谁都买得到，拉开差距的是AI生产力系统；AI的下一程是生产力系统之争",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "生产力",
+        "得到",
+        "差距"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507448.html",
+      "pub_date": "2026-11-03 11:13:49",
+      "created_at": "2026-11-04 10:21:04"
+    },
     {
       "title_zh": "B站举办2026超级科学晚",
       "summary_zh": "B站举办2026超级科学晚，脑机接口、人造太阳等前沿科技齐亮相；10月31日，2026年bilibili超级科学晚（以下简称“B站科学晚”）在北京如期举行",
