@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-11-06 10:27:17",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "百度开源文心5.5 Flash Base",
+      "summary_zh": "百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA；11月5日，百度正式开源最新基座模型文心5.5 Flash Base",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "模型",
+        "开源",
+        "文心"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507787.html",
+      "pub_date": "2026-11-05 07:15:13",
+      "created_at": "2026-11-06 10:27:16"
+    },
+    {
+      "title_zh": "MIT神作被锤：Astra爆改Qwen权重？就吹吧！",
+      "summary_zh": "MIT神作被锤：Astra爆改Qwen权重；spaCy作者长文炮轰",
+      "category": {
+        "l1": "行业",
+        "l2": "开源"
+      },
+      "tags": [
+        "爆改",
+        "炮轰",
+        "权重"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507782.html",
+      "pub_date": "2026-11-05 07:10:56",
+      "created_at": "2026-11-06 10:27:16"
+    },
+    {
+      "title_zh": "以“真实工作”检验机器人价值",
+      "summary_zh": "以“真实工作”检验机器人价值，XROGO在CeMAT ASIA发布机器人到岗计划；像雇人一样雇机器人",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "机器人",
+        "计划",
+        "检验"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/507767.html",
+      "pub_date": "2026-11-05 05:25:37",
+      "created_at": "2026-11-06 10:27:17"
+    }
+  ]
+}
