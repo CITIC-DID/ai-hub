@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-11-06 10:27:17",
-  "total_count": 305,
+  "last_updated": "2026-11-07 09:56:07",
+  "total_count": 308,
   "news": [
+    {
+      "title_zh": "DeepSeek带火稀疏计算",
+      "summary_zh": "DeepSeek带火稀疏计算，国产芯片公司加速突围：这家公司又融近10亿；Q3营收实现数倍增长",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "公司",
+        "国产",
+        "芯片"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/508155.html",
+      "pub_date": "2026-11-06 07:00:29",
+      "created_at": "2026-11-07 09:56:06"
+    },
+    {
+      "title_zh": "一边赛博修仙，一边卖家电！AI短剧开始冲双11业绩了？",
+      "summary_zh": "一边赛博修仙，一边卖家电；AI短剧开始冲双11业绩了",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "挑战",
+        "视频",
+        "商业"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/508118.html",
+      "pub_date": "2026-11-06 06:54:17",
+      "created_at": "2026-11-07 09:56:06"
+    },
+    {
+      "title_zh": "从RSI、Agent、Physical AI到整个系统栈",
+      "summary_zh": "从RSI、Agent、Physical AI到整个系统栈，2026 奇点智能技术大会最新日程公布；11 月 20—21 日，2026 奇点智能技术大会将在北京万达文华酒店举行",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "技术",
+        "大会",
+        "智能"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/508143.html",
+      "pub_date": "2026-11-06 06:43:14",
+      "created_at": "2026-11-07 09:56:07"
+    },
     {
       "title_zh": "百度开源文心5.5 Flash Base",
       "summary_zh": "百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA；11月5日，百度正式开源最新基座模型文心5.5 Flash Base",
