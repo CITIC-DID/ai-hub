@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-11-08 09:27:03",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "GitHub不堪重负！OpenAI收购替代品",
+      "summary_zh": "GitHub不堪重负；OpenAI收购替代品，A社原地自研，马斯克也要搞",
+      "category": {
+        "l1": "厂商",
+        "l2": "开源"
+      },
+      "tags": [
+        "替代品",
+        "基础设施",
+        "跟不上"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/508449.html",
+      "pub_date": "2026-11-07 09:38:56",
+      "created_at": "2026-11-08 09:27:03"
+    },
+    {
+      "title_zh": "OpenAI新融资到账110亿美元，不及原计划一半",
+      "summary_zh": "OpenAI新融资到账110亿美元，不及原计划一半；融资缩水，硅谷投资人也谨慎了",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "融资",
+        "缩水",
+        "硅谷"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/508344.html",
+      "pub_date": "2026-11-07 08:11:25",
+      "created_at": "2026-11-08 09:27:03"
+    },
+    {
+      "title_zh": "为了去AI味，人类开始主动写烂文章了……",
+      "summary_zh": "为了去AI味，人类开始主动写烂文章了……；需要说明的是，这并不意味着不会说人话就一定是人，也不意味着说人话的就一定不是AI.......",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "文章",
+        "需要",
+        "意味着"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/508330.html",
+      "pub_date": "2026-11-07 07:59:28",
+      "created_at": "2026-11-08 09:27:03"
+    }
+  ]
+}
