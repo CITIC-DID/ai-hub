@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-11-11 09:56:54",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "从芯片到千比特整机，超导量子计算还有一场硬仗",
+      "summary_zh": "从芯片到千比特整机，超导量子计算还有一场硬仗；近亿元融资刚刚落袋",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "硬仗",
+        "量子",
+        "还有"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/509017.html",
+      "pub_date": "2026-11-10 08:33:25",
+      "created_at": "2026-11-11 09:56:53"
+    },
+    {
+      "title_zh": "从“一脑多机”到“一脑多手”",
+      "summary_zh": "从“一脑多机”到“一脑多手”，蚂蚁灵波开源LingBot-Touch触觉基础模型；11月10日，蚂蚁灵波科技开源触觉基础模型LingBot-Touch",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "触觉",
+        "开源",
+        "模型"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/508996.html",
+      "pub_date": "2026-11-10 07:57:45",
+      "created_at": "2026-11-11 09:56:53"
+    },
+    {
+      "title_zh": "Agent自演进驶入“双轨时代”！openJiuwen首发TTSE经验学习框架",
+      "summary_zh": "Agent自演进驶入“双轨时代”；openJiuwen首发TTSE经验学习框架",
+      "category": {
+        "l1": "政策",
+        "l2": "原厂"
+      },
+      "tags": [
+        "驶入",
+        "经验",
+        "成为"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/508998.html",
+      "pub_date": "2026-11-10 07:56:29",
+      "created_at": "2026-11-11 09:56:54"
+    }
+  ]
+}
