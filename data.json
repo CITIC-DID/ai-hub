@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-11-11 09:56:54",
-  "total_count": 318,
+  "last_updated": "2026-11-13 10:38:24",
+  "total_count": 321,
   "news": [
+    {
+      "title_zh": "多模态“源神”！MiniMax开源SOTA生图模型",
+      "summary_zh": "多模态“源神”；MiniMax开源SOTA生图模型，原生4K，一张两毛",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "开源",
+        "生图",
+        "模型"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/509440.html",
+      "pub_date": "2026-11-12 11:36:20",
+      "created_at": "2026-11-13 10:38:24"
+    },
+    {
+      "title_zh": "从通用大模型到学习过程智能，AI如何真正进入课堂？",
+      "summary_zh": "从通用大模型到学习过程智能，AI如何真正进入课堂；银河智学首席科学家邓澍军博士发表主题演讲",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "科学家",
+        "博士",
+        "模型"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/509404.html",
+      "pub_date": "2026-11-12 10:45:33",
+      "created_at": "2026-11-13 10:38:24"
+    },
+    {
+      "title_zh": "Anthropic启动IPO路演",
+      "summary_zh": "Anthropic启动IPO路演，估值已缩水6000亿美元；全世界都在踩刹车，达里奥一个人踩油门",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "已缩水",
+        "路演",
+        "估值"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/509381.html",
+      "pub_date": "2026-11-12 10:11:29",
+      "created_at": "2026-11-13 10:38:24"
+    },
     {
       "title_zh": "从芯片到千比特整机，超导量子计算还有一场硬仗",
       "summary_zh": "从芯片到千比特整机，超导量子计算还有一场硬仗；近亿元融资刚刚落袋",
