@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-11-14 10:27:24",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "黄仁勋辞职，英伟达33年首换帅，市值蒸发超3万亿",
+      "summary_zh": "黄仁勋辞职，英伟达33年首换帅，市值蒸发超3万亿；一个时代结束了",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "首换帅",
+        "结束",
+        "蒸发"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/509995.html",
+      "pub_date": "2026-11-13 09:02:39",
+      "created_at": "2026-11-14 10:27:24"
+    },
+    {
+      "title_zh": "MEET2027含金量再加码",
+      "summary_zh": "MEET2027含金量再加码：AI4S/量子计算/AI Infra…第二批嘉宾强势来袭；12.9 北京，来MEET2027现场",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "量子",
+        "加码",
+        "强势"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/509827.html",
+      "pub_date": "2026-11-13 07:51:08",
+      "created_at": "2026-11-14 10:27:24"
+    },
+    {
+      "title_zh": "中国AI突破复杂肺癌诊疗！中美医疗圈集体坐不住了",
+      "summary_zh": "中国AI突破复杂肺癌诊疗；250名国内顶尖三甲医院医生联合评测",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "医疗",
+        "诊疗",
+        "肺癌"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/509796.html",
+      "pub_date": "2026-11-13 07:43:03",
+      "created_at": "2026-11-14 10:27:24"
+    }
+  ]
+}
