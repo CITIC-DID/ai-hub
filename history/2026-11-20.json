@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-11-20 11:16:11",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "具身机器人进入真机时代",
+      "summary_zh": "具身机器人进入真机时代，华为云CloudRobo开始组队发力了；一批卡可以轮流服务多家公司，一次适配也能让更多团队受益",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "运营商"
+      },
+      "tags": [
+        "家家",
+        "公司",
+        "算力"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/511426.html",
+      "pub_date": "2026-11-20 01:07:38",
+      "created_at": "2026-11-20 11:16:11"
+    },
+    {
+      "title_zh": "影视飓风、Manus、影石、OPPO……极客公园创新大会 2027 嘉宾阵容更新！",
+      "summary_zh": "影视飓风、Manus、影石、OPPO……极客公园创新大会 2027 嘉宾阵容更新；「Revaluation 价值，另有答案」",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "飓风",
+        "大会",
+        "极客"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/511258.html",
+      "pub_date": "2026-11-19 08:43:10",
+      "created_at": "2026-11-20 11:16:11"
+    },
+    {
+      "title_zh": "GTA6刷屏！零AI纯手搓的3A大作玩一个少一个了",
+      "summary_zh": "零AI纯手搓的3A大作玩一个少一个了；媒体均分登顶历史第一，细节多到爆炸",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "登顶",
+        "历史",
+        "细节"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/511180.html",
+      "pub_date": "2026-11-19 08:18:30",
+      "created_at": "2026-11-20 11:16:11"
+    }
+  ]
+}
