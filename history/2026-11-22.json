@@ -1,0 +1,63 @@
+{
+  "last_updated": "2026-11-22 10:14:41",
+  "total_count": 3,
+  "news": [
+    {
+      "title_zh": "6.2 Astra再次暴击具身模型",
+      "summary_zh": "GPT-6.2 Astra再次暴击具身模型：16项任务成功率较GPT-6 Astra翻倍；还实现可变形物体操控全球首通",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "模型",
+        "物体",
+        "操控"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/511779.html",
+      "pub_date": "2026-11-21 06:35:59",
+      "created_at": "2026-11-22 10:14:41"
+    },
+    {
+      "title_zh": "DeepSeek V1作者创业项目曝光",
+      "summary_zh": "刚刚，DeepSeek V1作者创业项目曝光：开源Agent；专为本地部署而生",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "开源"
+      },
+      "tags": [
+        "开源",
+        "创业项目",
+        "作者"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/511570.html",
+      "pub_date": "2026-11-21 06:32:31",
+      "created_at": "2026-11-22 10:14:41"
+    },
+    {
+      "title_zh": "姚顺雨和混元团队上Reddit答网友",
+      "summary_zh": "姚顺雨和混元团队上Reddit答网友，Hy小模型已进路线图；还透露了不少训练背后的秘诀",
+      "category": {
+        "l1": "技术趋势",
+        "l2": "原厂"
+      },
+      "tags": [
+        "训练",
+        "团队",
+        "透露"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/511757.html",
+      "pub_date": "2026-11-21 06:30:55",
+      "created_at": "2026-11-22 10:14:41"
+    }
+  ]
+}
