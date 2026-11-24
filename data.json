@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-11-23 10:46:19",
-  "total_count": 347,
+  "last_updated": "2026-11-24 14:04:09",
+  "total_count": 350,
   "news": [
+    {
+      "title_zh": "报名从速｜来MEET2027！听AI前沿实践者交出“判断”",
+      "summary_zh": "报名从速｜来MEET2027；听AI前沿实践者交出“判断”",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "实践者",
+        "现场",
+        "判断"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/512329.html",
+      "pub_date": "2026-11-24 03:33:48",
+      "created_at": "2026-11-24 14:04:09"
+    },
+    {
+      "title_zh": "蚂蚁OceanBase发布湖库一体AI数据平台OceanLake",
+      "summary_zh": "蚂蚁OceanBase发布湖库一体AI数据平台OceanLake，核心引擎向全球开源；中国AI数据平台加速崛起",
+      "category": {
+        "l1": "厂商",
+        "l2": "开源"
+      },
+      "tags": [
+        "数据",
+        "平台",
+        "湖库"
+      ],
+      "importance_score": 6.6,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/512330.html",
+      "pub_date": "2026-11-24 03:30:46",
+      "created_at": "2026-11-24 14:04:09"
+    },
+    {
+      "title_zh": "释放AI与出海强预期",
+      "summary_zh": "释放AI与出海强预期，近1500人参与亿邦产业互联网年会暨首届产业智能体大会；2026年11月20日，第八届亿邦产业互联网年会与首届产业智能体大会在北京国贸大酒店首次合体举行",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "产业",
+        "出海",
+        "大会"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/512305.html",
+      "pub_date": "2026-11-24 03:21:12",
+      "created_at": "2026-11-24 14:04:09"
+    },
     {
       "title_zh": "Nature",
       "summary_zh": "Nature：糖尿病大鼠成功恢复正常血糖；用电刺激迷走神经控糖",
