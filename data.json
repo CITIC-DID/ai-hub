@@ -1,7 +1,64 @@
 {
-  "last_updated": "2026-11-26 12:10:08",
-  "total_count": 353,
+  "last_updated": "2026-11-27 12:16:02",
+  "total_count": 356,
   "news": [
+    {
+      "title_zh": "第三批嘉宾来袭！速戳报名MEET2027",
+      "summary_zh": "第三批嘉宾来袭；速戳报名MEET2027，驭见AI新共识",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "速戳",
+        "驭见",
+        "报名"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/513091.html",
+      "pub_date": "2026-11-27 02:56:03",
+      "created_at": "2026-11-27 12:16:02"
+    },
+    {
+      "title_zh": "乾崑共创者计划发布：加入乾崑生态，共创出行未来！",
+      "summary_zh": "乾崑共创者计划发布：加入乾崑生态，共创出行未来；11月26日，“乾崑生态 共赴热爱”华为乾崑生态大会在广州南沙体育馆举行",
+      "category": {
+        "l1": "厂商",
+        "l2": "原厂"
+      },
+      "tags": [
+        "生态",
+        "广州",
+        "南沙"
+      ],
+      "importance_score": 5.8,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/513087.html",
+      "pub_date": "2026-11-27 02:19:12",
+      "created_at": "2026-11-27 12:16:02"
+    },
+    {
+      "title_zh": "陶哲轩下场验证黎曼猜想！“AI批量吐证明就像发电厂排核废料”",
+      "summary_zh": "陶哲轩下场验证黎曼猜想；“AI批量吐证明就像发电厂排核废料”",
+      "category": {
+        "l1": "行业",
+        "l2": "原厂"
+      },
+      "tags": [
+        "猜想",
+        "核废料",
+        "课题"
+      ],
+      "importance_score": 5.0,
+      "source": "量子位",
+      "region": "国内",
+      "url": "https://www.qbitai.com/2026/11/513075.html",
+      "pub_date": "2026-11-27 02:03:10",
+      "created_at": "2026-11-27 12:16:02"
+    },
     {
       "title_zh": "AI影视高地正在北影海淀一带崛起",
       "summary_zh": "AI影视高地正在北影海淀一带崛起，「一人制片厂」基建搭好了；叠满海淀最强AI Buff",
